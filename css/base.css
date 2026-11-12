@@ -1,0 +1,24 @@
+/* ==== BASE : couleurs des 3 thèmes (Jour / Nuit / Néon), polices, boutons, titres ==== */
+:root{--bg:#F6F4FF;--ink:#1B1740;--muted:#55507A;--card:#FFFFFF;--violet:#5B3DF5;--coral:#FF5C8A;--sun:#FFC93C;--mint:#2EE6A6;--ov:#FFFFFF;--oc:#1B1740;--os:#1B1740;--om:#10332A;
+--display:"Bricolage Grotesque","Trebuchet MS",system-ui,sans-serif;--body:"DM Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+:root[data-theme="dark"]{--bg:#14112E;--ink:#F2EFFF;--muted:#B4AEDB;--card:#1F1A45;--violet:#7C63FF;--coral:#FF7AA2;--sun:#FFD25E;--mint:#3DEBB0}
+:root[data-theme="neon"]{--bg:#07030F;--ink:#EFFFFB;--muted:#9FB8D8;--card:#120A24;--violet:#B34DFF;--coral:#FF3D9A;--sun:#F4FF3A;--mint:#19FFC6;--ov:#07030F;--oc:#07030F;--os:#07030F;--om:#07030F}
+html{height:100%;scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 1.0625rem/1.6 var(--body);-webkit-font-smoothing:antialiased;transition:background .3s}
+a{color:inherit}
+button{font:inherit;color:inherit;cursor:pointer}
+:focus-visible{outline:3px solid var(--violet);outline-offset:3px;border-radius:6px}
+#bg{position:fixed;inset:0;width:100%;height:100%;z-index:0;pointer-events:none}
+.wrap{max-width:1080px;margin:0 auto;padding:0 24px;position:relative;z-index:1}
+h1,h2,h3{font-family:var(--display);line-height:1.05;margin:0;letter-spacing:-.02em}
+h2{font-size:clamp(2rem,5vw,3rem);font-weight:800;margin-bottom:28px}
+h3{font-size:1.55rem;font-weight:800;margin-bottom:8px}
+p{margin:0 0 16px;max-width:62ch}
+.btn{display:inline-block;padding:14px 26px;border-radius:999px;font-weight:500;text-decoration:none;border:2px solid var(--ink);background:var(--card);transition:transform .15s}
+.btn:hover{transform:translateY(-3px)}
+.btn.main{background:var(--violet);color:var(--ov);border-color:var(--violet)}
+section{padding:64px 0}
+.chips{display:flex;flex-wrap:wrap;gap:8px;padding:0;margin:16px 0 0;list-style:none}
+.chips li{padding:5px 14px;border-radius:999px;border:2px solid currentColor;font-size:.95rem;font-weight:500}

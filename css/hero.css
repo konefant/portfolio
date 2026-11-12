@@ -1,0 +1,10 @@
+/* ==== ACCUEIL : grand titre + photo ==== */
+.hero{display:grid;grid-template-columns:1.25fr .75fr;gap:40px;align-items:center;padding:48px 0 80px}
+.hero h1{font-size:clamp(4rem,13vw,9rem);font-weight:800;line-height:.9}
+.lead{font:500 clamp(1.2rem,2.5vw,1.6rem)/1.35 var(--display);max-width:30ch;margin:22px 0 28px}
+.btns{display:flex;flex-wrap:wrap;gap:12px}
+.ph{position:relative;max-width:340px;justify-self:center;width:100%}
+.ph::before{content:"";position:absolute;inset:-14px 14px 14px -14px;background:var(--sun);border-radius:50% 50% 46% 54%/46% 54% 50% 50%;transform:rotate(-6deg)}
+.ph::after{content:"";position:absolute;width:38%;aspect-ratio:1;right:-16px;bottom:-16px;background:var(--coral);border-radius:50%;z-index:0}
+.ph img{position:relative;z-index:1;display:block;width:100%;height:auto;border-radius:38% 62% 50% 50%/42% 42% 58% 58%}
+:root[data-theme="neon"] h1{text-shadow:0 0 24px var(--violet)}

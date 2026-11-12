@@ -7,22 +7,59 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,800&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/style.css">
+<!-- Un fichier de style par bloc de la page -->
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/header-footer.css">
+<link rel="stylesheet" href="css/hero.css">
+<link rel="stylesheet" href="css/profil.css">
+<link rel="stylesheet" href="css/projets.css">
+<link rel="stylesheet" href="css/detail.css">
+<link rel="stylesheet" href="css/competences.css">
+<link rel="stylesheet" href="css/parcours.css">
+<link rel="stylesheet" href="css/engagement.css">
+<link rel="stylesheet" href="css/contact.css">
+<link rel="stylesheet" href="css/responsive.css">
 </head>
 <body>
 <canvas id="bg" aria-hidden="true"></canvas>
+
 <div class="wrap">
-  <div id="hdr"></div>
-  <main>
+
+<!-- ==================================================
+     BLOC : EN-TÊTE (menu + thème + langue)
+     Style : css/header-footer.css · Logique : js/theme.js, js/lang.js
+     ================================================== -->
+  <header>
+  <a class="logo" href="#top">Fanta Kone</a>
+  <nav aria-label="Navigation">
+    <a href="#profil" data-en="Profile">Profil</a><a href="#projets" data-en="Projects">Projets</a><a href="#competences" data-en="Skills">Compétences</a><a href="#parcours" data-en="Experience">Parcours</a><a href="#engagement" data-en="Community">Engagement</a><a href="#contact">Contact</a>
+  </nav>
+  <div class="ctl">
+    <div class="seg" id="th" role="group" aria-label="Thème"><button data-t="light" data-en="Day">Jour</button><button data-t="dark" data-en="Night">Nuit</button><button data-t="neon">Néon</button></div>
+    <div class="seg" id="lg" role="group" aria-label="Langue"><button data-l="0">FR</button><button data-l="1">EN</button></div>
+  </div>
+</header>
+
+
+<main id="top">
+
+<!-- ==================================================
+     BLOC : ACCUEIL
+     Style : css/hero.css · Photo : assets/photo.jpg
+     ================================================== -->
   <div class="hero">
     <div>
       <h1>Fanta</h1>
       <p class="lead" data-en="Software systems engineer, consultant in digital transformation and application integration.">Ingénieure SI, consultante en transformation digitale et intégration applicative.</p>
-      <div class="btns"><a class="btn main" href="projets.html" data-en="See my projects">Voir mes projets</a><a class="btn" href="contact.html" data-en="Contact me">Me contacter</a></div>
+      <div class="btns"><a class="btn main" href="#projets" data-en="See my projects">Voir mes projets</a><a class="btn" href="#contact" data-en="Contact me">Me contacter</a></div>
     </div>
     <div class="ph"><img src="assets/photo.jpg" alt="Portrait de Fanta" width="520" height="519"></div>
   </div>
 
+<!-- ==================================================
+     BLOC : PROFIL
+     Style : css/profil.css
+     ================================================== -->
   <section id="profil" aria-labelledby="t1">
     <div class="prof">
       <h2 id="t1" data-en="Profile">Profil</h2>
@@ -31,10 +68,91 @@
       <ul class="chips"><li>ServiceNow</li><li>Full-stack</li><li data-en="Data & AI">Data & IA</li><li>Agile · Scrum</li><li>ITIL</li></ul>
     </div>
   </section>
-  </main>
-  <div id="ftr"></div>
+
+<!-- ==================================================
+     BLOC : PROJETS
+     Style : css/projets.css · Les projets se modifient dans js/data.js (cartes générées par js/projets.js)
+     ================================================== -->
+  <section id="projets" aria-labelledby="t2"><h2 id="t2" data-en="Projects">Projets</h2><div class="projects" id="pj"></div></section>
+
+<!-- ==================================================
+     BLOC : COMPÉTENCES
+     Style : css/competences.css
+     ================================================== -->
+  <section id="competences" aria-labelledby="t3">
+    <h2 id="t3" data-en="Skills">Compétences</h2>
+    <div class="skills">
+      <div class="skill"><h3 data-en="Consulting & IS">Conseil et SI</h3><ul><li data-en="Business needs analysis">Analyse du besoin métier</li><li data-en="Agile (Scrum, Kanban), ITIL">Agile (Scrum, Kanban), ITIL</li><li data-en="Functional testing">Recette fonctionnelle</li><li data-en="Change management">Change Management</li></ul></div>
+      <div class="skill"><h3 data-en="Business solutions">Solutions métiers</h3><ul><li>ServiceNow (CSM/ITSM)</li><li>Power BI</li><li>Jira, EasyVista</li></ul></div>
+      <div class="skill"><h3 data-en="Tech & integration">Tech et intégration</h3><ul><li>SQL (MySQL, PostgreSQL, Oracle)</li><li>APIs REST/JSON</li><li>JavaScript, Python, Java, Spring Boot</li></ul></div>
+      <div class="skill"><h3 data-en="Quality & data">Qualité et data</h3><ul><li>Selenium, JUnit, SonarQube</li><li data-en="Machine learning & analytics">Machine learning et analytics</li></ul></div>
+      <div class="skill"><h3 data-en="Analysis & design">Analyse et conception</h3><ul><li data-en="Information system modelling">Modélisation SI</li><li data-en="Interface mockups (Figma)">Maquettage (Figma)</li></ul></div>
+    </div>
+  </section>
+
+<!-- ==================================================
+     BLOC : PARCOURS
+     Style : css/parcours.css
+     ================================================== -->
+  <section id="parcours" aria-labelledby="t4">
+    <h2 id="t4" data-en="Experience">Parcours</h2>
+    <div class="timeline">
+      <div class="step"><h3 data-en="Technical CRM consultant (work-study) · Capgemini, Nantes">Consultante technique CRM (alternance) · Capgemini, Nantes</h3><small data-en="Sept. 2025 – Sept. 2026">Sept. 2025 – sept. 2026</small><p data-en="ServiceNow configuration, integration and application maintenance for large accounts in healthcare, banking and transport.">Paramétrage, intégration ServiceNow et MCO applicatif pour de grands comptes des secteurs santé, bancaire et transport.</p></div>
+      <div class="step"><h3 data-en="Full-stack developer (internship) · ImsCloud, Le Mans">Développeuse full-stack (stage) · ImsCloud, Le Mans</h3><small data-en="July – Oct. 2024">Juil. – oct. 2024</small><p data-en="Interactive widgets for an order management web app.">Widgets interactifs pour une application web de gestion de commandes.</p></div>
+      <div class="step"><h3 data-en="General engineering degree · ESEO, Angers">Diplôme d’ingénieur généraliste · ESEO, Angers</h3><small data-en="Sept. 2021 – Sept. 2026">Sept. 2021 – sept. 2026</small><p data-en="Engineering school with projects in software engineering, data science and DevOps.">École d’ingénieurs, avec des projets en génie logiciel, data science et DevOps.</p></div>
+    </div>
+  </section>
+
+<!-- ==================================================
+     BLOC : ENGAGEMENT ET BÉNÉVOLAT
+     Style : css/engagement.css
+     ================================================== -->
+  <section id="engagement" aria-labelledby="t5">
+    <h2 id="t5" data-en="Community & volunteering">Engagement et bénévolat</h2>
+    <div class="vie">
+      <article><h3>eseoBantout</h3><p data-en="I took part in eseoBantout, a student club at ESEO, helping bring the campus community together.">J’ai participé à eseoBantout, un club étudiant de l’ESEO, pour faire vivre la communauté du campus.</p></article>
+      <article><h3 data-en="Capgemini ambassador">Ambassadrice Capgemini</h3><p data-en="I represent Capgemini and share my work-study experience with students and young talents.">Je représente Capgemini et partage mon expérience d’alternante auprès des étudiants et jeunes talents.</p></article>
+      <article><h3 data-en="Beyond work">En dehors du travail</h3><p data-en="Volunteering, event organisation, basketball and cooking.">Bénévolat, organisation d’événements, basketball et cuisine.</p></article>
+    </div>
+  </section>
+
+<!-- ==================================================
+     BLOC : CONTACT
+     Style : css/contact.css
+     ================================================== -->
+  <section id="contact" aria-labelledby="t6" style="padding-bottom:0">
+    <div class="contact">
+      <h2 id="t6" data-en="Let’s talk?">On discute ?</h2>
+      <p data-en="A job, an internship or a project to share: write to me.">Un poste, un stage ou un projet à partager : écris-moi.</p>
+      <a class="mail" href="mailto:fantakonelah@gmail.com">fantakonelah@gmail.com</a>
+      <div class="social"><a href="https://www.linkedin.com/in/fanta-kone" target="_blank" rel="noopener">LinkedIn</a><a href="tel:+33744760548">07 44 76 05 48</a></div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ==================================================
+     BLOC : PIED DE PAGE
+     Style : css/header-footer.css
+     ================================================== -->
+
+  <footer>© Fanta Kone, 2026</footer>
+
 </div>
 
+<!-- ==================================================
+     BLOC : FENÊTRE DE DÉTAIL DES PROJETS
+     Style : css/detail.css · Remplie par js/projets.js
+     ================================================== -->
+
+<dialog id="dlg" aria-labelledby="dt"><div id="dc"></div></dialog>
+<!-- Les scripts se chargent dans cet ordre : ne change pas l’ordre -->
+<script src="js/utils.js"></script>
+<script src="js/data.js"></script>
+<script src="js/projets.js"></script>
+<script src="js/lang.js"></script>
+<script src="js/theme.js"></script>
+<script src="js/background.js"></script>
 <script src="js/main.js"></script>
 </body>
 </html>

@@ -1,5 +1,5 @@
-/* Données des projets : pour ajouter un projet, copie un bloc {...} et modifie-le.
-   Chaque texte existe en 2 versions : [français, anglais]. */
+/* ==== DONNÉES DES PROJETS : pour ajouter un projet, copie un bloc {...} et modifie-le.
+   Chaque texte existe en 2 versions : [français, anglais]. ==== */
 const P=[
 {c:"v",big:1,t:["BidCraft AI","BidCraft AI"],x:["SaaS B2B · Projet personnel","B2B SaaS · Personal project"],a:["Une plateforme qui génère des mémoires techniques pour les appels d’offres du BTP.","A platform that generates technical bid responses for construction tenders."],
  d:["Un SaaS qui aide les entreprises du BTP à répondre plus vite à leurs appels d’offres. Le backend FastAPI s’appuie sur une approche RAG (pgvector sur Supabase) pour retrouver les bons éléments et rédiger des réponses adaptées à chaque dossier.","A SaaS that helps construction companies answer tenders faster. The FastAPI backend uses a RAG approach (pgvector on Supabase) to retrieve the right material and draft answers tailored to each tender."],

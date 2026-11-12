@@ -1,0 +1,12 @@
+/* ==== PROJETS : cartes de couleur ==== */
+.projects{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+.proj{border-radius:28px;padding:30px;display:flex;flex-direction:column;justify-content:space-between;min-height:300px}
+.proj.big{grid-column:1/-1}
+.proj.v{background:var(--violet);color:var(--ov)}
+.proj.c{background:var(--coral);color:var(--oc)}
+.proj.s{background:var(--sun);color:var(--os)}
+.proj.m{background:var(--mint);color:var(--om)}
+.ctx{font-weight:500;opacity:.85;margin-bottom:10px}
+.more{align-self:flex-start;margin-top:18px;padding:10px 22px;border-radius:999px;border:2px solid currentColor;background:none;font-weight:500}
+.more:hover{background:rgba(255,255,255,.25)}
+:root[data-theme="neon"] .proj,:root[data-theme="neon"] .contact{box-shadow:0 0 26px -6px currentColor}

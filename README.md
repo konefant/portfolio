@@ -1,56 +1,52 @@
-# Portfolio de Fanta Kone
+# Portfolio de Fanta Kone (une seule page)
 
-Site statique : **HTML + CSS + JavaScript pur**. Aucun outil à installer, il suffit d’un navigateur et d’un éditeur de code (VS Code par exemple).
+Site statique en **HTML + CSS + JavaScript pur**. Tout le site est dans `index.html` (une page longue qui défile), mais le code est rangé en blocs pour s’y retrouver.
+
+## Où modifier quoi
+
+| Je veux changer…                         | J’ouvre…                                              |
+|------------------------------------------|-------------------------------------------------------|
+| Le texte d’une section                   | `index.html`, cherche `BLOC : NOM-DE-LA-SECTION`      |
+| Un projet (ou en ajouter)                | `js/data.js`                                          |
+| Les couleurs (Jour / Nuit / Néon)        | `css/base.css`, en haut                               |
+| Le style d’une section                   | le fichier `css/` du même nom (`hero.css`, `projets.css`…) |
+| La fenêtre de détail d’un projet         | `css/detail.css` (style) et `js/projets.js` (contenu) |
+| Le fond interactif (bulles, confettis)   | `js/background.js`                                    |
+| Les thèmes Jour / Nuit / Néon            | `js/theme.js`                                         |
+| Le changement FR / EN                    | `js/lang.js`                                          |
+| Ma photo                                 | remplacer `assets/photo.jpg` (même nom)               |
 
 ## Structure
 
 ```
 portfolio/
-├── index.html          Accueil (présentation + profil)
-├── projets.html        Projets (cartes + fenêtre de détail)
-├── parcours.html       Parcours + compétences
-├── engagement.html     eseoBantout, ambassadrice Capgemini, bénévolat
-├── contact.html        Email, LinkedIn, téléphone
-├── css/style.css       Tous les styles et les couleurs des thèmes
-├── js/main.js          En-tête, thèmes Jour/Nuit/Néon, langue FR/EN, fond interactif
-├── js/data.js          Les projets (textes FR/EN, technologies)
-└── assets/photo.jpg    Ta photo
+├── index.html           la page complète, découpée en BLOCS commentés
+├── css/                 un fichier de style par bloc
+│   ├── base.css  header-footer.css  hero.css  profil.css  projets.css
+│   └── detail.css  competences.css  parcours.css  engagement.css  contact.css  responsive.css
+├── js/
+│   ├── utils.js  data.js  projets.js  lang.js  theme.js  background.js  main.js
+└── assets/photo.jpg
 ```
+
+Dans `index.html`, chaque bloc commence par un cadre de commentaire qui indique son nom et ses fichiers de style. Utilise **Ctrl+F** puis `BLOC :` pour sauter d’un bloc à l’autre.
+
+## Règles à retenir
+
+- **Textes** : le français est dans la balise, l’anglais dans `data-en="..."`. Modifie les deux.
+- **Ordre des scripts** à la fin de `index.html` : ne le change pas (`main.js` doit rester en dernier).
+- **Ajouter une section** : copie un bloc `<section>` dans `index.html`, crée son fichier `css/ma-section.css`, ajoute la ligne `<link>` dans le `<head>` et un lien dans le menu.
 
 ## Voir le site sur ton PC
 
-Double-clique sur `index.html`. Avec VS Code, l’extension **Live Server** recharge la page à chaque modification.
+Double-clique sur `index.html`, ou utilise l’extension **Live Server** de VS Code.
 
-## Modifier
-
-- **Un texte** : ouvre la page concernée. Le texte français est dans la balise, la version anglaise dans l’attribut `data-en="..."`. Modifie les deux.
-- **Un projet** : dans `js/data.js`, copie un bloc `{ ... }` et change les textes. Chaque texte a deux versions : `["français", "anglais"]`. Le champ `c` donne la couleur (`v` violet, `c` corail, `s` jaune, `m` menthe) et `big:1` rend la carte pleine largeur.
-- **Les couleurs** : variables au début de `css/style.css` (`:root`, puis `dark` et `neon`).
-- **La photo** : remplace `assets/photo.jpg` (même nom).
-- **Ajouter une page** : copie `contact.html`, change le contenu, puis ajoute une ligne dans `NAV` en haut de `js/main.js`.
-- **Ton CV** : mets `cv.pdf` dans `assets/` et ajoute dans `contact.html` : `<a href="assets/cv.pdf" download>Télécharger mon CV</a>`.
-
-## Mettre sur GitHub et publier (GitHub Pages)
-
-1. Crée un dépôt vide sur github.com (par exemple `portfolio`).
-2. Dans le dossier du site, dans un terminal :
+## Mettre à jour le site sur GitHub
 
 ```
-git init
-git add .
-git commit -m "Premier commit : portfolio"
-git branch -M main
-git remote add origin https://github.com/TON-PSEUDO/portfolio.git
-git push -u origin main
+git add -A
+git commit -m "Ce que j’ai changé"
+git push
 ```
 
-3. Sur GitHub : **Settings → Pages → Source : Deploy from a branch → `main` / `(root)` → Save**.
-4. Après une minute, le site est en ligne sur `https://TON-PSEUDO.github.io/portfolio/`.
-   Avec un dépôt nommé `TON-PSEUDO.github.io`, l’adresse devient `https://TON-PSEUDO.github.io/`.
-
-Ensuite, chaque `git add . && git commit -m "..." && git push` met le site à jour.
-
-## À savoir
-
-- Le site est public : ton email et ton numéro de téléphone (dans `contact.html`) seront visibles par tous.
-- Les textes eseoBantout et ambassadrice Capgemini (`engagement.html`) sont généraux : à personnaliser.
+Le site se met à jour en une à deux minutes.
