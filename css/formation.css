@@ -1,0 +1,9 @@
+/* ==== FORMATION : liste numérotée, du plus récent au plus ancien ==== */
+.fl{position:relative;display:grid;grid-template-columns:minmax(0,1fr);gap:22px;padding-left:64px}
+.fl::before{content:"";position:absolute;left:23px;top:8px;bottom:8px;width:3px;border-radius:3px;background:linear-gradient(var(--violet),var(--coral),var(--mint))}
+.fi{position:relative;display:grid;grid-template-columns:1fr auto;gap:18px;align-items:center;background:var(--card);border-radius:26px;padding:24px 28px}
+.fi::before{content:attr(data-n);position:absolute;left:-64px;top:22px;width:48px;height:48px;border-radius:50%;background:var(--violet);color:var(--ov);display:grid;place-items:center;font:500 .95rem "DM Mono",ui-monospace,monospace;box-shadow:0 0 0 6px color-mix(in srgb,var(--violet) 22%,transparent)}
+.fi .pill{display:inline-block;margin-bottom:10px}
+.fi p{margin-bottom:8px}
+.fi .chips{margin-top:12px}
+.fi .chips li{font-size:.85rem;padding:3px 11px;border-width:1.5px}

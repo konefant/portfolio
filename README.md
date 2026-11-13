@@ -1,40 +1,38 @@
 # Portfolio de Fanta Kone (une seule page)
 
-Site statique en **HTML + CSS + JavaScript pur**. Tout est dans `index.html` (une page longue), rangé en blocs commentés.
+Site statique en **HTML + CSS + JavaScript pur**. Tout est dans `index.html`, rangé en blocs commentés (Ctrl+F puis `BLOC :`).
 
 ## Où modifier quoi
 
-| Je veux changer…                          | J’ouvre…                                                        |
-|-------------------------------------------|-----------------------------------------------------------------|
-| Le texte d’une section                    | `index.html`, Ctrl+F puis `BLOC : NOM-DE-LA-SECTION`            |
-| Un projet (ou en ajouter)                 | `js/data.js`                                                    |
-| Une expérience du parcours                | `index.html`, bloc PARCOURS (un `<article class="tli">` par ligne, du plus récent au plus ancien) |
-| Les couleurs (Jour / Nuit / Néon)         | `css/base.css`, en haut                                         |
-| Le menu flottant et le pied de page       | `index.html` (blocs MENU et PIED DE PAGE) + `css/header-footer.css` |
-| Le fond animé (réseau de points)          | `js/background.js`                                              |
-| Le formulaire de contact                  | `index.html` (bloc CONTACT) + `js/contact.js`                   |
-| Ma photo                                  | remplacer `assets/photo.jpg` (même nom)                         |
+| Je veux changer…                         | J’ouvre…                                                              |
+|------------------------------------------|-----------------------------------------------------------------------|
+| Une compétence ou une carte              | `index.html`, bloc COMPÉTENCES (un `<article class="sk">` par carte)  |
+| Une expérience                           | `index.html`, bloc EXPÉRIENCES (un `<article class="xi">`, du plus récent au plus ancien) |
+| Une formation                            | `index.html`, bloc FORMATION (le numéro est dans `data-n="01"`)       |
+| Une certification                        | `index.html`, bloc CERTIFICATIONS                                     |
+| Un projet                                | `js/data.js`                                                          |
+| Engagements, cuisine, photos             | `index.html`, bloc ENGAGEMENT ET PASSIONS                             |
+| Un logo                                  | remplacer le fichier dans `assets/logos/` (voir ci-dessous)           |
+| Les photos                               | `assets/photos/` (mêmes noms de fichiers)                             |
+| Les couleurs (Jour / Nuit / Néon)        | `css/base.css`, en haut                                               |
+| Le fond animé                            | `js/background.js`                                                    |
+| Le formulaire de contact                 | `index.html` (bloc CONTACT) + `js/contact.js`                         |
 
-## Structure
+## Logos
 
-```
-portfolio/
-├── index.html      la page complète, en BLOCS commentés
-├── css/            un fichier de style par bloc (base, header-footer, hero, profil, projets, detail,
-│                   competences, parcours, engagement, contact, responsive)
-├── js/             utils, data, projets, lang, theme, background, nav, contact, main
-└── assets/photo.jpg
-```
+- `hitachi.svg` vient d’une bibliothèque d’icônes libre. Les autres (`capgemini`, `eseo`, `itma`, `cci`, `inrs`, `mooc`, `imscloud`, `robotsmali`, `eseobantu`, `lycee`, `cuisine`) sont des **logos provisoires** (texte ou pictogramme).
+- Pour mettre un vrai logo : enregistre-le dans `assets/logos/` sous le même nom. Si c’est un PNG, par exemple `capgemini.png`, remplace `capgemini.svg` par `capgemini.png` dans `index.html` (Ctrl+H).
 
 ## Règles à retenir
 
-- **Textes** : le français est dans la balise, l’anglais dans `data-en="..."`. Modifie les deux. Pour les champs du formulaire, l’anglais du texte d’exemple est dans `data-enp="..."`.
+- **Textes** : le français est dans la balise, l’anglais dans `data-en="..."`. Modifie les deux.
 - **Ordre des scripts** à la fin de `index.html` : ne le change pas (`main.js` en dernier).
 - **Ajouter une section** : copie un bloc `<section id="...">`, ajoute son fichier `css/` et son `<link>`, puis une ligne `<a href="#id">` dans le menu (le lien actif se gère tout seul).
+- **Photos de groupe** : ces photos montrent d’autres personnes, vérifie que c’est OK pour elles avant de publier.
 
-## Formulaire de contact
+## Voir le site sur ton PC
 
-Le formulaire **ouvre la messagerie du visiteur** avec le message prérempli (`mailto:`). Rien n’est stocké sur le site. Pour recevoir les messages directement, on peut brancher un service comme Formspree plus tard.
+Double-clique sur `index.html`, ou utilise l’extension **Live Server** de VS Code.
 
 ## Mettre à jour le site sur GitHub
 

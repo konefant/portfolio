@@ -23,8 +23,8 @@ section{padding:64px 0}
 .chips{display:flex;flex-wrap:wrap;gap:8px;padding:0;margin:16px 0 0;list-style:none}
 .chips li{padding:5px 14px;border-radius:999px;border:2px solid currentColor;font-size:.95rem;font-weight:500}
 /* Effet « sélectionné » au survol / au clavier sur les boîtes */
-.proj,.skill,.vie article,.tli,.chan a{transition:transform .25s,box-shadow .25s}
-.proj:focus-within,.skill:focus-within,.chan a:focus-visible{transform:translateY(-6px);box-shadow:0 0 0 3px var(--violet),0 20px 40px -14px rgba(27,23,64,.35)}
-@media (hover:hover){.proj:hover,.skill:hover,.vie article:hover,.tli:hover,.chan a:hover{transform:translateY(-6px);box-shadow:0 0 0 3px var(--violet),0 20px 40px -14px rgba(27,23,64,.35)}
-:root[data-theme="neon"] .proj:hover,:root[data-theme="neon"] .tli:hover{box-shadow:0 0 0 3px var(--mint),0 0 34px -4px var(--mint)}}
+.proj,.xi,.fi,.ci,.eng,.chan a{transition:transform .25s,box-shadow .25s}
+.proj:focus-within,.xi:focus-within,.fi:focus-within,.ci:focus-within,.eng:focus-within,.chan a:focus-visible{transform:translateY(-6px);box-shadow:0 0 0 3px var(--violet),0 20px 40px -14px rgba(27,23,64,.35)}
+@media (hover:hover){.proj:hover,.xi:hover,.fi:hover,.ci:hover,.eng:hover,.chan a:hover{transform:translateY(-6px);box-shadow:0 0 0 3px var(--violet),0 20px 40px -14px rgba(27,23,64,.35)}
+:root[data-theme="neon"] .proj:hover,:root[data-theme="neon"] .xi:hover,:root[data-theme="neon"] .fi:hover,:root[data-theme="neon"] .ci:hover,:root[data-theme="neon"] .eng:hover{box-shadow:0 0 0 3px var(--mint),0 0 34px -4px var(--mint)}}
 .sub{color:var(--muted);max-width:70ch;margin:-14px 0 28px}

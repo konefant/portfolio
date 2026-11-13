@@ -6,16 +6,19 @@
 <title>Fanta Kone – Portfolio</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,800&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,800&family=DM+Sans:wght@400;500&family=DM+Mono:wght@500&display=swap" rel="stylesheet">
 <!-- Un fichier de style par bloc de la page -->
 <link rel="stylesheet" href="css/base.css">
 <link rel="stylesheet" href="css/header-footer.css">
 <link rel="stylesheet" href="css/hero.css">
 <link rel="stylesheet" href="css/profil.css">
+<link rel="stylesheet" href="css/cards.css">
+<link rel="stylesheet" href="css/competences.css">
+<link rel="stylesheet" href="css/experiences.css">
+<link rel="stylesheet" href="css/formation.css">
+<link rel="stylesheet" href="css/certifs.css">
 <link rel="stylesheet" href="css/projets.css">
 <link rel="stylesheet" href="css/detail.css">
-<link rel="stylesheet" href="css/competences.css">
-<link rel="stylesheet" href="css/parcours.css">
 <link rel="stylesheet" href="css/engagement.css">
 <link rel="stylesheet" href="css/contact.css">
 <link rel="stylesheet" href="css/responsive.css">
@@ -28,9 +31,9 @@
      Style : css/header-footer.css · Logique : js/nav.js, js/theme.js, js/lang.js
      ================================================== -->
 <header class="nav" id="nav">
-  <a class="brand" href="#top" aria-label="Accueil"><span class="mono">FK</span><span class="bn"><b>Fanta KONE</b><small data-en="Software systems engineer">Ingénieure SI</small></span></a>
+  <a class="brand" href="#top" aria-label="Accueil"><span class="mono-fk">FK</span><span class="bn"><b>Fanta KONE</b><small data-en="Software systems engineer">Ingénieure SI</small></span></a>
   <nav id="menu" aria-label="Navigation">
-    <a href="#profil" data-en="Profile">Profil</a><a href="#projets" data-en="Projects">Projets</a><a href="#competences" data-en="Skills">Compétences</a><a href="#parcours" data-en="Experience">Parcours</a><a href="#engagement" data-en="Community">Engagement</a><a href="#contact">Contact</a>
+    <a href="#profil" data-en="Profile">Profil</a><a href="#competences" data-en="Skills">Compétences</a><a href="#experiences" data-en="Experience">Expériences</a><a href="#formation" data-en="Education">Formation</a><a href="#certifs" data-en="Certifications">Certifs</a><a href="#projets" data-en="Projects">Projets</a><a href="#engagement" data-en="Community">Engagement</a><a href="#contact">Contact</a>
   </nav>
   <div class="ctl">
     <button class="round" id="th" type="button" aria-label="Changer de thème"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 3a9 9 0 0 1 0 18z" fill="currentColor"/></svg></button>
@@ -69,63 +72,83 @@
   </section>
 
 <!-- ==================================================
+     BLOC : COMPÉTENCES (9 cartes)
+     Style : css/competences.css · Logique : js/skills.js · Pour une carte : copie un <article class="sk">
+     ================================================== -->
+  <section id="competences" aria-labelledby="t3">
+    <h2 data-en="Technical skills"id="t3">Compétences techniques</h2>
+    <p class="sub" data-en="Click a card to light it up.">Cliquez sur une carte pour la mettre en lumière.</p>
+    <div class="skg">
+      <article class="sk"><button class="ic" type="button" aria-pressed="false" aria-label="Mettre en lumière"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="5" height="16" rx="1.5"/><rect x="10" y="4" width="5" height="10" rx="1.5"/><rect x="17" y="4" width="4" height="6" rx="1.5"/></svg></button><p class="lab" data-en="METHODS &amp; BA">MÉTHODES &amp; AMOA</p><h3 data-en="Agile project management">Gestion de projet Agile</h3><ul class="chips"><li>Agile Scrum</li><li>Kanban</li><li data-en="Requirements gathering">Recueil du besoin</li><li data-en="Writing user stories">Rédaction de User Stories</li><li data-en="Backlog management">Gestion de backlog</li><li data-en="Process analysis">Analyse de processus</li><li>Jira</li><li>EasyVista</li></ul></article>
+      <article class="sk"><button class="ic" type="button" aria-pressed="false" aria-label="Mettre en lumière"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l9 5-9 5-9-5z"/><path d="M3 13l9 5 9-5"/></svg></button><p class="lab" data-en="PLATFORMS &amp; ITSM">PLATEFORMES &amp; ITSM</p><h3 data-en="Consulting &amp; IS integration">Conseil &amp; Intégration SI</h3><ul class="chips"><li>ServiceNow (ITSM / CSM)</li><li data-en="Low-code configuration">Paramétrage Low-Code</li><li data-en="Automated workflows">Workflows automatisés</li><li>ITIL</li><li>MCO / TMA</li><li data-en="Version upgrade (go-live)">Montée de version (MEP)</li><li>Skip Records</li><li>Runbook</li></ul></article>
+      <article class="sk"><button class="ic" type="button" aria-pressed="false" aria-label="Mettre en lumière"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="9" cy="8" r="3"/><path d="M3 20c0-3.3 2.7-6 6-6s6 2.7 6 6"/><circle cx="17" cy="9" r="2.5"/><path d="M16 14.2c3 0 5 2 5 5"/></svg></button><p class="lab" data-en="STRENGTHS">ATOUTS</p><h3>Soft skills</h3><ul class="chips"><li data-en="Analytical mind">Esprit d’analyse</li><li data-en="Business / IT interface">Interface métier / IT</li><li data-en="Rigor">Rigueur</li><li data-en="Autonomy">Autonomie</li><li data-en="Proactivity">Proactivité</li><li data-en="Priority management">Gestion des priorités</li><li data-en="Team spirit">Esprit d’équipe</li><li data-en="Technical curiosity">Curiosité technique</li></ul></article>
+      <article class="sk"><button class="ic" type="button" aria-pressed="false" aria-label="Mettre en lumière"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20l1-4L16 5l3 3L8 19z"/><path d="M14 7l3 3"/></svg></button><p class="lab" data-en="DESIGN">CONCEPTION</p><h3 data-en="Modelling &amp; UX">Modélisation &amp; UX</h3><ul class="chips"><li data-en="IS modelling">Modélisation SI</li><li>PlantUML</li><li data-en="Mockups (Figma)">Maquettage (Figma)</li><li data-en="Functional specifications">Spécifications fonctionnelles</li><li data-en="Shift-left approach">Démarche Shift-Left</li><li>Knowledge Management</li></ul></article>
+      <article class="sk"><button class="ic" type="button" aria-pressed="false" aria-label="Mettre en lumière"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l8 3v6c0 4.5-3.2 7.8-8 9-4.8-1.2-8-4.5-8-9V6z"/><path d="M8.5 12l2.5 2.5 4.5-5"/></svg></button><p class="lab" data-en="QUALITY &amp; QA">QUALITÉ &amp; QA</p><h3 data-en="Testing &amp; software acceptance">Tests &amp; Recette logicielle</h3><ul class="chips"><li data-en="Test strategy">Stratégie de test</li><li data-en="Functional tests">Tests fonctionnels</li><li data-en="Integration tests">Tests d’intégration</li><li data-en="L2/L3 qualification">Qualification N2/N3</li><li>Selenium</li><li>JUnit / Mockito</li><li>SonarQube</li></ul></article>
+      <article class="sk"><button class="ic" type="button" aria-pressed="false" aria-label="Mettre en lumière"><svg viewBox="0 0 24 24" aria-hidden="true"><ellipse cx="12" cy="6" rx="8" ry="3"/><path d="M4 6v6c0 1.7 3.6 3 8 3s8-1.3 8-3V6"/><path d="M4 12v6c0 1.7 3.6 3 8 3s8-1.3 8-3v-6"/></svg></button><p class="lab" data-en="STORAGE &amp; BI">STOCKAGE &amp; BI</p><h3 data-en="Databases &amp; reporting">Bases de données &amp; Reporting</h3><ul class="chips"><li>SQL</li><li>PostgreSQL</li><li>MySQL</li><li>Oracle</li><li>Power BI</li><li data-en="ServiceNow dashboards">Dashboards ServiceNow</li><li>Excel</li></ul></article>
+      <article class="sk"><button class="ic" type="button" aria-pressed="false" aria-label="Mettre en lumière"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="6" cy="6" r="2.5"/><circle cx="18" cy="8" r="2.5"/><circle cx="12" cy="18" r="2.5"/><path d="M8.2 7l7.6.8M7.2 8.2l3.6 7.6M16.8 10.2l-3.6 5.6"/></svg></button><p class="lab" data-en="DATA &amp; AI">DATA &amp; IA</p><h3 data-en="Machine learning &amp; graphs">Machine Learning &amp; Graphes</h3><ul class="chips"><li>Python</li><li>Pandas</li><li>NumPy</li><li>Scikit-Learn</li><li>PyTorch Geometric</li><li data-en="Graphs (GAT)">Graphes (GAT)</li><li>Isolation Forest</li><li data-en="Generative AI (Claude &amp; others)">IA générative (Claude et autres)</li></ul></article>
+      <article class="sk"><button class="ic" type="button" aria-pressed="false" aria-label="Mettre en lumière"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 8l-4 4 4 4M16 8l4 4-4 4M13.5 5l-3 14"/></svg></button><p class="lab" data-en="ENGINEERING">INGÉNIERIE</p><h3 data-en="Development &amp; APIs">Développement &amp; APIs</h3><ul class="chips"><li>Java / Spring Boot</li><li>JavaScript</li><li>React JS</li><li>Vue.js</li><li>Node.js / Express</li><li>.NET</li><li>APIs REST / JSON</li></ul></article>
+      <article class="sk"><button class="ic" type="button" aria-pressed="false" aria-label="Mettre en lumière"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M7 10l3 2.5L7 15M12.5 15H17"/></svg></button><p class="lab" data-en="ENVIRONMENT">ENVIRONNEMENT</p><h3 data-en="Tools &amp; DevOps">Outils &amp; DevOps</h3><ul class="chips"><li>Git</li><li>GitLab / GitHub</li><li>Maven / Gradle</li><li data-en="KPI tracking">Suivi de KPIs</li><li data-en="Windows environment">Environnement Windows</li></ul></article>
+      </div>
+  </section>
+
+<!-- ==================================================
+     BLOC : EXPÉRIENCES (du plus récent au plus ancien)
+     Style : css/experiences.css + css/cards.css · Logos : assets/logos/
+     ================================================== -->
+  <section id="experiences" aria-labelledby="t4">
+    <h2 data-en="Professional experience"id="t4">Expériences professionnelles</h2>
+    <p class="sub" data-en="Most recent first.">Du plus récent au plus ancien.</p>
+    <div class="xp">
+      <article class="xi"><div class="top"><span class="logo"><img src="assets/logos/capgemini.svg" alt="Capgemini" width="84" height="56" loading="lazy"></span><span class="pill" data-en="Sept. 2025 — Sept. 2026">Sept. 2025 — Sept. 2026</span></div><h3 class="cardt" data-en="Technical CRM consultant">Consultante technique CRM</h3><p class="org">Capgemini</p><p class="mono" data-en="Work-study · Nantes · 1 year">Alternance · Nantes · 1 an</p><ul class="det"><li data-en="Santé Publique France (healthcare): ITSM transformation and maintenance, L1/L2/L3 incident handling, specifications and automated low-code workflows on ServiceNow.">Santé Publique France (santé) : transformation et MCO ITSM, traitement d’incidents N1/N2/N3, spécifications et workflows automatisés low-code sous ServiceNow.</li><li data-en="Crédit Agricole (banking): version upgrade and IS deployment, release notes analysis, 550 Skip Records processed, 8 to 10 configuration issues fixed, operations Runbook written.">Crédit Agricole (banque) : montée de version et déploiement SI, analyse des Release Notes, 550 Skip Records traités, 8 à 10 anomalies de configuration résolues, Runbook d’exploitation rédigé.</li><li data-en="RATP (transport): 35+ integration and business acceptance test cases.">RATP (transport) : plus de 35 cas de tests d’intégration et de recette métier.</li></ul></article>
+      <article class="xi"><div class="top"><span class="logo"><img src="assets/logos/hitachi.svg" alt="Hitachi" width="84" height="56" loading="lazy"></span><span class="pill" data-en="Oct. 2025 — Jan. 2026">Oct. 2025 — Janv. 2026</span></div><h3 class="cardt" data-en="AI &amp; graph pipeline for fraud detection">Pipeline IA &amp; graphes pour la détection de fraude</h3><p class="org">Hitachi</p><p class="mono" data-en="Project · Angers · 4 months">Projet · Angers · 4 mois</p><ul class="det"><li data-en="End-to-end Python pipeline (Pandas, NumPy) on over 100,000 complex transaction records in XML and CSV.">Pipeline complet sous Python (Pandas, NumPy) sur plus de 100 000 données transactionnelles complexes aux formats XML et CSV.</li><li data-en="Graph learning models (GAT) and clustering (Isolation Forest) for automated analysis.">Modèles d’apprentissage sur graphes (GAT) et clustering (Isolation Forest) pour l’analyse automatisée.</li><li data-en="Technologies: Python, PyTorch Geometric, Scikit-Learn, Power BI.">Technologies : Python, PyTorch Geometric, Scikit-Learn, Power BI.</li></ul></article>
+      <article class="xi"><div class="top"><span class="logo"><img src="assets/logos/imscloud.svg" alt="ImsCloud" width="84" height="56" loading="lazy"></span><span class="pill" data-en="Jul. 2024 — Oct. 2024">Juil. 2024 — Oct. 2024</span></div><h3 class="cardt" data-en="Full-stack developer">Développeuse full-stack</h3><p class="org">ImsCloud</p><p class="mono" data-en="Internship · Le Mans · 4 months">Stage · Le Mans · 4 mois</p><ul class="det"><li data-en="Development of interactive widgets for an order management web app.">Développement de widgets interactifs pour une application web de gestion de commandes.</li><li data-en="Better real-time data visualisation and user experience.">Amélioration de la visualisation des données en temps réel et de l’expérience utilisateur.</li><li data-en="New features in Agile (Kanban) with the product team. Technologies: JavaScript, React JS, Node JS, Express JS, Git, Figma.">Nouvelles fonctionnalités en Agile (Kanban) avec l’équipe produit. Technologies : JavaScript, React JS, Node JS, Express JS, Git, Figma.</li></ul></article>
+      <article class="xi"><div class="top"><span class="logo"><img src="assets/logos/robotsmali.svg" alt="RobotsMali" width="84" height="56" loading="lazy"></span><span class="pill" data-en="Jul. 2022 — Aug. 2022">Juil. 2022 — Août 2022</span></div><h3 class="cardt" data-en="Intern">Stagiaire</h3><p class="org">RobotsMali</p><p class="mono" data-en="Internship · Bamako, Mali · On site · 2 months">Stage · Bamako, Mali · Sur site · 2 mois</p><ul class="det"><li data-en="Design and build of an Arduino-based smart home.">Conception et réalisation d’une maison intelligente basée sur Arduino.</li><li data-en="Integration and configuration of sensors and actuators to automate some of the system’s functions.">Intégration et configuration de capteurs et d’actionneurs pour automatiser certaines fonctions du système.</li><li data-en="Contribution to needs analysis, electronic assembly and embedded logic development.">Participation à l’analyse des besoins, à l’assemblage des composants électroniques et au développement de la logique embarquée.</li><li data-en="Testing and validation of the connected devices.">Tests et validation du fonctionnement des équipements connectés.</li></ul></article>
+      </div>
+  </section>
+
+<!-- ==================================================
+     BLOC : FORMATION (du plus récent au plus ancien)
+     Style : css/formation.css · Le numéro est dans data-n="01"
+     ================================================== -->
+  <section id="formation" aria-labelledby="t5">
+    <h2 data-en="Education"id="t5">Formation</h2>
+    <p class="sub" data-en="Most recent first.">Du plus récent au plus ancien.</p>
+    <div class="fl">
+      <article class="fi" data-n="01"><div><span class="pill" data-en="2024 — 2026">2024 — 2026</span><h3 class="cardt" data-en="Engineering degree, Software &amp; Data">Diplôme d’ingénieur, Logiciel et Données</h3><p class="org">ESEO · Angers</p><p data-en="Skills: data analysis, SQL and 10+ more.">Compétences : analyse des données, SQL et plus de 10 autres.</p></div><span class="logo"><img src="assets/logos/eseo.svg" alt="ESEO" width="84" height="56" loading="lazy"></span></article>
+      <article class="fi" data-n="02"><div><span class="pill" data-en="Aug. 2023 — June 2024">Août 2023 — Juin 2024</span><h3 class="cardt" data-en="Core curriculum, Computer Science &amp; Electronics">Tronc commun, Informatique et Électronique</h3><p class="org">ESEO · Angers</p><p data-en="Activities and societies: in charge of ESEOBANTU’s teams.">Activités et associations : chargée des pôles d’ESEOBANTU.</p><ul class="chips"><li data-en="Java programming">Programmation Java</li><li data-en="Modelling and test validation">Modélisation et validation des tests</li><li>MySQL, HTML</li><li data-en="Embedded systems (VHDL, C/C++)">Systèmes embarqués (VHDL, C/C++)</li><li data-en="Digital systems architecture">Architecture des systèmes numériques</li><li data-en="Analog electronics">Électronique analogique</li><li data-en="Switching electronics">Électronique de commutation</li><li data-en="Automation &amp; electrical engineering">Automatisation et génie électrique</li><li data-en="Signals &amp; systems">Signaux et systèmes</li><li data-en="Networks &amp; security (Packet Tracer, Wireshark)">Réseaux et sécurité (Packet Tracer, Wireshark)</li><li>PlantUML</li><li>JavaScript</li></ul></div><span class="logo"><img src="assets/logos/eseo.svg" alt="ESEO" width="84" height="56" loading="lazy"></span></article>
+      <article class="fi" data-n="03"><div><span class="pill" data-en="Nov. 2021 — June 2023">Nov. 2021 — Juin 2023</span><h3 class="cardt" data-en="Preparatory classes for the Grandes Écoles (CPGE)">Classes préparatoires aux grandes écoles (CPGE)</h3><p class="org" data-en="African Institute of Technology and Management (ITMA)">Institut africain de technologie et de management (ITMA)</p><p data-en="Mathematics, physics, engineering sciences. Python computing project and Arduino project.">Mathématiques, physique, sciences de l’ingénieur. Projet informatique en Python et projet Arduino.</p><ul class="chips"><li data-en="Electronics">Électronique</li><li>Python</li></ul></div><span class="logo"><img src="assets/logos/itma.svg" alt="ITMA" width="84" height="56" loading="lazy"></span></article>
+      <article class="fi" data-n="04"><div><h3 class="cardt" data-en="Malian scientific baccalaureate, Experimental">Baccalauréat scientifique malien, Expérimentale</h3><p class="org">Lycée Sacré-Cœur</p></div><span class="logo"><img src="assets/logos/lycee.svg" alt="Lycée Sacré-Cœur" width="84" height="56" loading="lazy"></span></article>
+      </div>
+  </section>
+
+<!-- ==================================================
+     BLOC : CERTIFICATIONS
+     Style : css/certifs.css
+     ================================================== -->
+  <section id="certifs" aria-labelledby="t6b">
+    <h2 data-en="Certifications"id="t6b">Certifications</h2>
+    <div class="cg">
+      <article class="ci"><div class="top"><span class="logo"><img src="assets/logos/cci.svg" alt="CCI France" width="84" height="56" loading="lazy"></span><span class="pill" data-en="May 2026">Mai 2026</span></div><h3 class="cardt">CLOE FLE</h3><p class="org">CCI France</p><ul class="chips"><li class="lvl" data-en="Level C2">Niveau C2</li></ul><a class="lk" href="https://certificats.candidat-cloe.com/check/0D1893C5CB2A59388B321DFDE2D181C505659A5ED169D4D487702592D211D202VFB5QzJLNE53b2F4cHZhRWc2V3dsMzlXd245Y055eEpmUFJ2MVR5WUtZSzFIWUdv" target="_blank" rel="noopener"><span data-en="View certificate">Afficher le diplôme</span></a></article>
+      <article class="ci"><div class="top"><span class="logo"><img src="assets/logos/inrs.svg" alt="INRS" width="84" height="56" loading="lazy"></span><span class="pill" data-en="Jan. 2024">Janv. 2024</span></div><h3 class="cardt">Prévention Sup’</h3><p class="org">INRS France</p></article>
+      <article class="ci"><div class="top"><span class="logo"><img src="assets/logos/mooc.svg" alt="MOOC" width="84" height="56" loading="lazy"></span><span class="pill" data-en="Oct. 2023">Oct. 2023</span></div><h3 class="cardt" data-en="Project management MOOC">MOOC Gestion de projet</h3><p class="org" data-en="Project management">Gestion de projet</p><ul class="chips"><li data-en="Web tools &amp; apps for project management">Outils et applications web pour la gestion de projet</li><li data-en="Visual project management">Management visuel de projet</li></ul></article>
+      </div>
+  </section>
+
+<!-- ==================================================
      BLOC : PROJETS
      Style : css/projets.css · Les projets se modifient dans js/data.js
      ================================================== -->
   <section id="projets" aria-labelledby="t2"><h2 id="t2" data-en="Projects">Projets</h2><div class="projects" id="pj"></div></section>
 
 <!-- ==================================================
-     BLOC : COMPÉTENCES
-     Style : css/competences.css
+     BLOC : ENGAGEMENT ET PASSIONS (cartes + cadres de photos)
+     Style : css/engagement.css · Logique : js/gallery.js · Photos : assets/photos/
      ================================================== -->
-  <section id="competences" aria-labelledby="t3">
-    <h2 id="t3" data-en="Skills">Compétences</h2>
-    <div class="skills">
-      <div class="skill"><h3 data-en="Consulting & IS">Conseil et SI</h3><ul><li data-en="Business needs analysis">Analyse du besoin métier</li><li data-en="Agile (Scrum, Kanban), ITIL">Agile (Scrum, Kanban), ITIL</li><li data-en="Functional testing">Recette fonctionnelle</li><li data-en="Change management">Change Management</li></ul></div>
-      <div class="skill"><h3 data-en="Business solutions">Solutions métiers</h3><ul><li>ServiceNow (CSM/ITSM)</li><li>Power BI</li><li>Jira, EasyVista</li></ul></div>
-      <div class="skill"><h3 data-en="Tech & integration">Tech et intégration</h3><ul><li>SQL (MySQL, PostgreSQL, Oracle)</li><li>APIs REST/JSON</li><li>JavaScript, Python, Java, Spring Boot</li></ul></div>
-      <div class="skill"><h3 data-en="Quality & data">Qualité et data</h3><ul><li>Selenium, JUnit, SonarQube</li><li data-en="Machine learning & analytics">Machine learning et analytics</li></ul></div>
-      <div class="skill"><h3 data-en="Analysis & design">Analyse et conception</h3><ul><li data-en="Information system modelling">Modélisation SI</li><li data-en="Interface mockups (Figma)">Maquettage (Figma)</li></ul></div>
-    </div>
-  </section>
-
-<!-- ==================================================
-     BLOC : PARCOURS (du plus récent au plus ancien)
-     Style : css/parcours.css · Pour ajouter une expérience, copie un <article class="tli"> et mets-le à sa place (par date)
-     ================================================== -->
-  <section id="parcours" aria-labelledby="t4">
-    <h2 id="t4" data-en="Experience & education">Parcours</h2>
-    <p class="sub" data-en="Most recent first.">Du plus récent au plus ancien.</p>
-    <div class="tl">
-      <article class="tli">
-        <p class="meta"><time datetime="2025-09" data-en="Sept. 2025 – Sept. 2026">Sept. 2025 – sept. 2026</time><span class="tag" data-en="Work-study">Alternance</span></p>
-        <h3 data-en="Technical CRM consultant">Consultante technique CRM</h3><p class="org">Capgemini · Nantes</p>
-        <p data-en="ServiceNow configuration, integration and application maintenance for large accounts: Santé Publique France, Crédit Agricole, RATP.">Paramétrage, intégration ServiceNow et MCO applicatif pour de grands comptes : Santé Publique France, Crédit Agricole, RATP.</p>
-      </article>
-      <article class="tli">
-        <p class="meta"><time datetime="2024-07" data-en="July – Oct. 2024">Juil. – oct. 2024</time><span class="tag" data-en="Internship">Stage</span></p>
-        <h3 data-en="Full-stack developer">Développeuse full-stack</h3><p class="org">ImsCloud · Le Mans</p>
-        <p data-en="Interactive widgets for an order management web app (React, Node.js, Express), in an Agile Kanban setup.">Widgets interactifs pour une application web de gestion de commandes (React, Node.js, Express), en Agile Kanban.</p>
-      </article>
-      <article class="tli">
-        <p class="meta"><time datetime="2021-09" data-en="Sept. 2021 – Sept. 2026">Sept. 2021 – sept. 2026</time><span class="tag" data-en="Education">Formation</span></p>
-        <h3 data-en="General engineering degree">Diplôme d’ingénieur généraliste</h3><p class="org">ESEO · Angers</p>
-        <p data-en="Engineering school with projects in software engineering, data science and DevOps.">École d’ingénieurs, avec des projets en génie logiciel, data science et DevOps.</p>
-      </article>
-    </div>
-  </section>
-
-<!-- ==================================================
-     BLOC : ENGAGEMENT ET BÉNÉVOLAT
-     Style : css/engagement.css
-     ================================================== -->
-  <section id="engagement" aria-labelledby="t5">
-    <h2 id="t5" data-en="Community & volunteering">Engagement et bénévolat</h2>
-    <div class="vie">
-      <article><h3>eseoBantout</h3><p data-en="I took part in eseoBantout, a student club at ESEO, helping bring the campus community together.">J’ai participé à eseoBantout, un club étudiant de l’ESEO, pour faire vivre la communauté du campus.</p></article>
-      <article><h3 data-en="Capgemini ambassador">Ambassadrice Capgemini</h3><p data-en="I represent Capgemini and share my work-study experience with students and young talents.">Je représente Capgemini et partage mon expérience d’alternante auprès des étudiants et jeunes talents.</p></article>
-      <article><h3 data-en="Beyond work">En dehors du travail</h3><p data-en="Volunteering, event organisation, basketball and cooking.">Bénévolat, organisation d’événements, basketball et cuisine.</p></article>
-    </div>
+  <section id="engagement" aria-labelledby="t7">
+    <h2 data-en="Community &amp; passions"id="t7">Engagement et passions</h2>
+    <div class="eg"><article class="eng"><div class="top"><span class="logo"><img src="assets/logos/capgemini.svg" alt="Capgemini" width="84" height="56" loading="lazy"></span><span class="pill" data-en="Jul. 2025 — Jul. 2026">Juil. 2025 — Juil. 2026</span></div><h3 class="cardt" data-en="Capgemini ambassador">Ambassadrice Capgemini</h3><p class="org">Capgemini</p><p class="mono" data-en="1 year 1 month">1 an 1 mois</p><p class="sum" data-en="Promoting IT careers to students: events, conferences and workshops.">Promouvoir les carrières IT auprès des étudiants : événements, conférences et ateliers.</p><details><summary><span class="s1" data-en="See details">Voir le détail</span><span class="s2" data-en="Hide details">Masquer le détail</span></summary><ul class="det"><li data-en="Organising events, conferences and workshops to promote careers in IT.">Organisation d’événements, de conférences et d’ateliers pour promouvoir les carrières dans le secteur IT.</li><li data-en="Building relationships between students, professionals and companies to foster internships, work-study and jobs.">Développement de relations entre étudiants, professionnels et entreprises pour favoriser les stages, alternances et emplois.</li><li data-en="Supporting students in their career orientation and discovery of digital professions.">Accompagnement des étudiants dans leur orientation professionnelle et leur découverte des métiers du numérique.</li></ul><ul class="chips"><li data-en="Interpersonal communication">Communication interpersonnelle</li><li>Communication</li></ul></details></article><div class="mos mos-cap" role="group" aria-label="Photos ambassadrice Capgemini"><button class="mi a" type="button"><img src="assets/photos/cap-group.jpg" alt="Photo de groupe des ambassadeurs Capgemini" loading="lazy"></button><button class="mi b" type="button"><img src="assets/photos/cap-trio.jpg" alt="Trois ambassadeurs Capgemini en blouson" loading="lazy"></button><button class="mi c" type="button"><img src="assets/photos/cap-team.jpg" alt="Fanta et des collègues au bureau" loading="lazy"></button><button class="mi d" type="button"><img src="assets/photos/cap-jacket.jpg" alt="Fanta en blouson Capgemini" loading="lazy"></button></div></div>
+    <div class="eg one"><article class="eng"><div class="top"><span class="logo"><img src="assets/logos/eseobantu.svg" alt="ESEOBANTU" width="84" height="56" loading="lazy"></span><span class="pill" data-en="Sept. 2023 — June 2025">Sept. 2023 — Juin 2025</span></div><h3 class="cardt" data-en="Head of the Organisation &amp; Events team">Responsable du pôle Organisation et Événementiel</h3><p class="org">ESEOBANTU</p><p class="mono" data-en="1 year 10 months · Angers, Pays de la Loire · On site">1 an 10 mois · Angers, Pays de la Loire · Sur site</p><p class="sum" data-en="Organising events and activities for the student community.">Organiser des événements et des activités pour la communauté étudiante.</p><details><summary><span class="s1" data-en="See details">Voir le détail</span><span class="s2" data-en="Hide details">Masquer le détail</span></summary><ul class="det"><li data-en="Planning and organising events.">Planification et organisation d’événements.</li><li data-en="Proposing and running activities for the student community.">Proposition et mise en place d’activités pour la communauté étudiante.</li><li data-en="Managing meal organisation.">Gestion de l’organisation des repas.</li><li data-en="Teamwork with the other members of the association.">Travail en équipe avec les autres membres de l’association.</li></ul><ul class="chips"><li data-en="Organisational leadership">Leadership organisationnel</li><li data-en="Event organisation">Organisation d’événements</li></ul></details></article></div>
+    <div class="eg rev"><article class="eng"><div class="top"><span class="logo"><img src="assets/logos/cuisine.svg" alt="Cuisine" width="84" height="56" loading="lazy"></span><span class="pill" data-en="Passion">Passion</span></div><h3 class="cardt" data-en="Cooking">Cuisine</h3><p class="sum" data-en="From salads to slow-cooked dishes, brunches and buffets: a glimpse of what I enjoy making.">Entre salades, plats mijotés, brunchs et buffets : un aperçu de ce qui me plaît dans les fourneaux.</p><p class="mono" data-en="Interests"style="margin-top:14px">Centres d’intérêt</p><ul class="chips"><li data-en="Volunteering">Bénévolat</li><li data-en="Event organisation">Organisation d’événements</li><li>Basketball</li><li data-en="Cooking">Cuisine</li></ul></article><div class="mos mos-food" role="group" aria-label="Photos de cuisine"><button class="mi a" type="button"><img src="assets/photos/food-buffet.jpg" alt="Buffet de plats variés" loading="lazy"></button><button class="mi b" type="button"><img src="assets/photos/food-burrata.jpg" alt="Salade de burrata et pêches rôties" loading="lazy"></button><button class="mi c" type="button"><img src="assets/photos/food-curry.jpg" alt="Plat mijoté avec du riz" loading="lazy"></button><button class="mi d" type="button"><img src="assets/photos/food-brunch.jpg" alt="Tartine de saumon et avocat, brunch" loading="lazy"></button><button class="mi e" type="button"><img src="assets/photos/food-salmon.jpg" alt="Tartines de saumon et salade de tomates" loading="lazy"></button></div></div>
   </section>
 
 <!-- ==================================================
@@ -162,8 +185,8 @@
      Style : css/header-footer.css
      ================================================== -->
   <footer class="foot">
-    <div><a class="brand" href="#top"><span class="mono">FK</span><span class="bn"><b>Fanta Kone</b><small data-en="Software systems engineer">Ingénieure SI</small></span></a><p>© 2026</p></div>
-    <div><h3>Navigation</h3><a href="#profil" data-en="Profile">Profil</a><a href="#projets" data-en="Projects">Projets</a><a href="#parcours" data-en="Experience">Parcours</a><a href="#contact">Contact</a></div>
+    <div><a class="brand" href="#top"><span class="mono-fk">FK</span><span class="bn"><b>Fanta Kone</b><small data-en="Software systems engineer">Ingénieure SI</small></span></a><p>© 2026</p></div>
+    <div><h3>Navigation</h3><a href="#profil" data-en="Profile">Profil</a><a href="#experiences" data-en="Experience">Expériences</a><a href="#projets" data-en="Projects">Projets</a><a href="#contact">Contact</a></div>
     <div><h3 data-en="Elsewhere">Ailleurs</h3><a href="mailto:fantakonelah@gmail.com">Email</a><a href="https://www.linkedin.com/in/fanta-kone" target="_blank" rel="noopener">LinkedIn</a></div>
   </footer>
 </div>
@@ -171,10 +194,11 @@
 <button class="round up" id="up" type="button" aria-label="Haut de page">↑</button>
 
 <!-- ==================================================
-     BLOC : FENÊTRE DE DÉTAIL DES PROJETS
-     Style : css/detail.css · Remplie par js/projets.js
+     BLOC : FENÊTRES : détail des projets et photo agrandie
+     Style : css/detail.css et css/engagement.css · Logique : js/projets.js et js/gallery.js
      ================================================== -->
 <dialog id="dlg" aria-labelledby="dt"><div id="dc"></div></dialog>
+<dialog id="lb" aria-label="Photo agrandie"><button class="x" type="button" aria-label="Fermer">×</button><img id="lbi" alt=""></dialog>
 
 <!-- Les scripts se chargent dans cet ordre : ne change pas l’ordre (main.js en dernier) -->
 <script src="js/utils.js"></script>
@@ -184,6 +208,8 @@
 <script src="js/theme.js"></script>
 <script src="js/background.js"></script>
 <script src="js/nav.js"></script>
+<script src="js/skills.js"></script>
+<script src="js/gallery.js"></script>
 <script src="js/contact.js"></script>
 <script src="js/main.js"></script>
 </body>

@@ -1,0 +1,7 @@
+/* ==== EXPÉRIENCES : frise centrale, du plus récent au plus ancien ==== */
+.xp{position:relative;display:grid;grid-template-columns:minmax(0,1fr);gap:36px}
+.xp::before{content:"";position:absolute;left:50%;top:6px;bottom:6px;width:3px;margin-left:-1.5px;border-radius:3px;background:linear-gradient(var(--violet),var(--coral),var(--mint))}
+.xi{position:relative;width:calc(50% - 44px);background:var(--card);border-radius:26px;padding:24px 26px}
+.xi:nth-child(odd){justify-self:start}.xi:nth-child(even){justify-self:end}
+.xi::after{content:"";position:absolute;top:34px;width:22px;height:22px;border-radius:50%;background:var(--violet);border:4px solid var(--bg);box-shadow:0 0 0 6px color-mix(in srgb,var(--violet) 25%,transparent)}
+.xi:nth-child(odd)::after{right:-55px}.xi:nth-child(even)::after{left:-55px}

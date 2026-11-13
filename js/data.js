@@ -1,18 +1,121 @@
 /* ==== DONNÉES DES PROJETS : pour ajouter un projet, copie un bloc {...} et modifie-le.
    Chaque texte existe en 2 versions : [français, anglais]. ==== */
 const P=[
-{c:"v",big:1,t:["BidCraft AI","BidCraft AI"],x:["SaaS B2B · Projet personnel","B2B SaaS · Personal project"],a:["Une plateforme qui génère des mémoires techniques pour les appels d’offres du BTP.","A platform that generates technical bid responses for construction tenders."],
- d:["Un SaaS qui aide les entreprises du BTP à répondre plus vite à leurs appels d’offres. Le backend FastAPI s’appuie sur une approche RAG (pgvector sur Supabase) pour retrouver les bons éléments et rédiger des réponses adaptées à chaque dossier.","A SaaS that helps construction companies answer tenders faster. The FastAPI backend uses a RAG approach (pgvector on Supabase) to retrieve the right material and draft answers tailored to each tender."],
- b:[["Backend FastAPI et recherche sémantique (RAG)","Interface en Next.js","Base de données Supabase avec pgvector"],["FastAPI backend and semantic search (RAG)","Next.js interface","Supabase database with pgvector"]],s:["FastAPI","RAG","Next.js","Supabase","pgvector"]},
-{c:"c",t:["Missions ServiceNow · Capgemini","ServiceNow missions · Capgemini"],x:["Alternance · Santé, banque, transport","Work-study · Healthcare, banking, transport"],a:["Paramétrage, intégration et MCO ServiceNow chez de grands comptes.","ServiceNow configuration, integration and maintenance for large accounts."],
- d:["Consultante technique CRM en alternance, j’ai accompagné de grands comptes sur le paramétrage, l’intégration ServiceNow et le MCO applicatif, en mode Agile Scrum.","As a work-study technical CRM consultant, I supported large accounts on ServiceNow configuration, integration and application maintenance, in an Agile Scrum setup."],
- b:[["Santé Publique France : incidents N1/N2/N3, spécifications et workflows low-code automatisés","Crédit Agricole : montée de version, 550 Skip Records traités, 8 à 10 anomalies résolues, Runbook d’exploitation rédigé","RATP : plus de 35 cas de tests d’intégration et de recette métier"],["Santé Publique France: N1/N2/N3 incidents, specifications and automated low-code workflows","Crédit Agricole: version upgrade, 550 Skip Records processed, 8 to 10 configuration issues fixed, operations Runbook written","RATP: 35+ integration and business acceptance test cases"]],s:["ServiceNow","ITIL","Jira","EasyVista","Scrum"]},
-{c:"s",t:["Détection de fraude","Fraud detection"],x:["Hitachi · Oct. 2025 – janv. 2026","Hitachi · Oct. 2025 – Jan. 2026"],a:["Un pipeline IA et graphes pour repérer automatiquement les fraudes.","An AI and graph pipeline to automatically spot fraud."],
- d:["Conception d’un pipeline complet de détection de fraude en Python, sur plus de 100 000 données transactionnelles complexes aux formats XML et CSV.","Design of a complete fraud detection pipeline in Python, on over 100,000 complex transaction records in XML and CSV."],
- b:[["Préparation des données avec Pandas et NumPy","Modèles d’apprentissage sur graphes (GAT) avec PyTorch Geometric","Clustering avec Isolation Forest pour l’analyse automatisée","Visualisation avec Power BI"],["Data preparation with Pandas and NumPy","Graph learning models (GAT) with PyTorch Geometric","Clustering with Isolation Forest for automated analysis","Visualisation with Power BI"]],s:["Python","PyTorch Geometric","Scikit-Learn","Pandas","Power BI"]},
-{c:"m",t:["Projet génie logiciel","Software engineering project"],x:["ESEO · Avr. – juin 2025","ESEO · Apr. – June 2025"],a:["Une application web de gestion de projet, en équipe de 7.","A project management web app, built in a team of 7."],
- d:["Conception et développement d’une application web de gestion de projet avec Spring et Vue.js, en équipe de 7 personnes dans un contexte agile (Scrum).","Design and development of a project management web app with Spring and Vue.js, in a team of 7 using Agile (Scrum)."],
- b:[["Recueil du besoin et rédaction de 150 User Stories sur 3 sprints","Rôle de Test Manager : stratégie de test, scénarios, validation fonctionnelle","Qualité avec JUnit, Selenium et SonarQube"],["Requirements gathering and 150 User Stories over 3 sprints","Test Manager role: test strategy, scenarios, functional validation","Quality with JUnit, Selenium and SonarQube"]],s:["Java","Spring Boot","Vue.js","Scrum","SQL"]},
-{c:"v",big:1,t:["Widgets de commandes · ImsCloud","Order widgets · ImsCloud"],x:["Stage full-stack · Juil. – oct. 2024","Full-stack internship · July – Oct. 2024"],a:["Des widgets interactifs pour visualiser les commandes en temps réel.","Interactive widgets to visualise orders in real time."],
- d:["Développement de widgets interactifs pour une application web de gestion de commandes, avec une meilleure visualisation des données en temps réel et une meilleure expérience utilisateur.","Development of interactive widgets for an order management web app, with better real-time data visualisation and user experience."],
- b:[["Nouvelles fonctionnalités en environnement Agile (Kanban)","Collaboration avec l’équipe produit pour répondre aux besoins métier","Maquettes sous Figma"],["New features in an Agile (Kanban) environment","Collaboration with the product team on business needs","Mockups in Figma"]],s:["JavaScript","React","Node.js","Express","Figma"]}];
+ {
+  "c": "v",
+  "big": 1,
+  "t": [
+   "BidCraft AI",
+   "BidCraft AI"
+  ],
+  "x": [
+   "SaaS B2B · Projet personnel",
+   "B2B SaaS · Personal project"
+  ],
+  "a": [
+   "Une plateforme qui génère des mémoires techniques pour les appels d’offres du BTP.",
+   "A platform that generates technical bid responses for construction tenders."
+  ],
+  "d": [
+   "Un SaaS qui aide les entreprises du BTP à répondre plus vite à leurs appels d’offres. Le backend FastAPI s’appuie sur une approche RAG (pgvector sur Supabase) pour retrouver les bons éléments et rédiger des réponses adaptées à chaque dossier.",
+   "A SaaS that helps construction companies answer tenders faster. The FastAPI backend uses a RAG approach (pgvector on Supabase) to retrieve the right material and draft answers tailored to each tender."
+  ],
+  "b": [
+   [
+    "Backend FastAPI et recherche sémantique (RAG)",
+    "Interface en Next.js",
+    "Base de données Supabase avec pgvector"
+   ],
+   [
+    "FastAPI backend and semantic search (RAG)",
+    "Next.js interface",
+    "Supabase database with pgvector"
+   ]
+  ],
+  "s": [
+   "FastAPI",
+   "RAG",
+   "Next.js",
+   "Supabase",
+   "pgvector"
+  ]
+ },
+ {
+  "c": "s",
+  "t": [
+   "Détection de fraude",
+   "Fraud detection"
+  ],
+  "x": [
+   "Hitachi · Oct. 2025 – janv. 2026",
+   "Hitachi · Oct. 2025 – Jan. 2026"
+  ],
+  "a": [
+   "Un pipeline IA et graphes pour repérer automatiquement les fraudes.",
+   "An AI and graph pipeline to automatically spot fraud."
+  ],
+  "d": [
+   "Conception d’un pipeline complet de détection de fraude en Python, sur plus de 100 000 données transactionnelles complexes aux formats XML et CSV.",
+   "Design of a complete fraud detection pipeline in Python, on over 100,000 complex transaction records in XML and CSV."
+  ],
+  "b": [
+   [
+    "Préparation des données avec Pandas et NumPy",
+    "Modèles d’apprentissage sur graphes (GAT) avec PyTorch Geometric",
+    "Clustering avec Isolation Forest pour l’analyse automatisée",
+    "Visualisation avec Power BI"
+   ],
+   [
+    "Data preparation with Pandas and NumPy",
+    "Graph learning models (GAT) with PyTorch Geometric",
+    "Clustering with Isolation Forest for automated analysis",
+    "Visualisation with Power BI"
+   ]
+  ],
+  "s": [
+   "Python",
+   "PyTorch Geometric",
+   "Scikit-Learn",
+   "Pandas",
+   "Power BI"
+  ]
+ },
+ {
+  "c": "m",
+  "t": [
+   "Projet génie logiciel",
+   "Software engineering project"
+  ],
+  "x": [
+   "ESEO · Avr. – juin 2025",
+   "ESEO · Apr. – June 2025"
+  ],
+  "a": [
+   "Une application web de gestion de projet, en équipe de 7.",
+   "A project management web app, built in a team of 7."
+  ],
+  "d": [
+   "Conception et développement d’une application web de gestion de projet avec Spring et Vue.js, en équipe de 7 personnes dans un contexte agile (Scrum).",
+   "Design and development of a project management web app with Spring and Vue.js, in a team of 7 using Agile (Scrum)."
+  ],
+  "b": [
+   [
+    "Recueil du besoin et rédaction de 150 User Stories sur 3 sprints",
+    "Rôle de Test Manager : stratégie de test, scénarios, validation fonctionnelle",
+    "Qualité avec JUnit, Selenium et SonarQube"
+   ],
+   [
+    "Requirements gathering and 150 User Stories over 3 sprints",
+    "Test Manager role: test strategy, scenarios, functional validation",
+    "Quality with JUnit, Selenium and SonarQube"
+   ]
+  ],
+  "s": [
+   "Java",
+   "Spring Boot",
+   "Vue.js",
+   "Scrum",
+   "SQL"
+  ]
+ }
+];

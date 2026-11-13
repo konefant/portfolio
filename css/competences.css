@@ -1,8 +1,15 @@
-/* ==== COMPÉTENCES ==== */
-.skills{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:18px}
-.skill{background:var(--card);border-radius:20px;padding:22px;border-top:8px solid var(--violet)}
-.skill:nth-child(2){border-color:var(--coral)}
-.skill:nth-child(3){border-color:var(--sun)}
-.skill:nth-child(4){border-color:var(--mint)}
-.skill h3{font-size:1.15rem}
-.skill ul{list-style:none;margin:0;padding:0;color:var(--muted)}
+/* ==== COMPÉTENCES : 9 cartes (3 x 3), la colonne du milieu est mise en avant ==== */
+.skg{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.sk{background:var(--card);border-radius:26px;padding:26px;border:2px solid transparent;cursor:pointer;transition:transform .25s,box-shadow .25s,border-color .25s}
+.sk:nth-child(3n+2){border-color:color-mix(in srgb,var(--violet) 32%,transparent);transform:translateY(-8px);box-shadow:0 20px 40px -26px var(--violet)}
+@media (hover:hover){.sk:hover{border-color:var(--violet);transform:translateY(-6px);box-shadow:0 0 0 4px color-mix(in srgb,var(--violet) 18%,transparent),0 24px 46px -18px color-mix(in srgb,var(--violet) 60%,transparent)}}
+.sk.on{border-color:var(--violet);transform:translateY(-6px);box-shadow:0 0 0 4px color-mix(in srgb,var(--violet) 18%,transparent),0 24px 46px -18px color-mix(in srgb,var(--violet) 60%,transparent)}
+.ic{width:54px;height:54px;border-radius:16px;border:0;padding:0;background:color-mix(in srgb,var(--violet) 14%,transparent);color:var(--violet);display:grid;place-items:center;margin-bottom:18px;transition:background .25s,color .25s,box-shadow .25s}
+.ic svg{width:26px;height:26px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+@media (hover:hover){.sk:hover .ic{background:var(--violet);color:var(--ov);box-shadow:0 8px 20px -6px var(--violet)}}
+.sk.on .ic{background:var(--violet);color:var(--ov);box-shadow:0 8px 20px -6px var(--violet)}
+.lab{font-size:.76rem;letter-spacing:.14em;color:var(--violet);margin:0 0 4px;text-transform:uppercase}
+.sk h3{font-size:1.35rem;margin-bottom:0}
+.sk ul{display:flex;flex-wrap:wrap;gap:8px;list-style:none;margin:16px 0 0;padding:0}
+.sk li{padding:6px 14px;border-radius:999px;background:var(--bg);border:1.5px solid color-mix(in srgb,var(--ink) 12%,transparent);font-size:.92rem;transition:background .2s,border-color .2s,transform .2s}
+.sk li:hover{background:color-mix(in srgb,var(--violet) 16%,var(--bg));border-color:var(--violet);transform:translateY(-1px)}
