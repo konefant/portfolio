@@ -23,24 +23,23 @@
 <body>
 <canvas id="bg" aria-hidden="true"></canvas>
 
-<div class="wrap">
-
 <!-- ==================================================
-     BLOC : EN-TÊTE (menu + thème + langue)
-     Style : css/header-footer.css · Logique : js/theme.js, js/lang.js
+     BLOC : MENU FLOTTANT (reste visible, section active surlignée)
+     Style : css/header-footer.css · Logique : js/nav.js, js/theme.js, js/lang.js
      ================================================== -->
-  <header>
-  <a class="logo" href="#top">Fanta Kone</a>
-  <nav aria-label="Navigation">
+<header class="nav" id="nav">
+  <a class="brand" href="#top" aria-label="Accueil"><span class="mono">FK</span><span class="bn"><b>Fanta KONE</b><small data-en="Software systems engineer">Ingénieure SI</small></span></a>
+  <nav id="menu" aria-label="Navigation">
     <a href="#profil" data-en="Profile">Profil</a><a href="#projets" data-en="Projects">Projets</a><a href="#competences" data-en="Skills">Compétences</a><a href="#parcours" data-en="Experience">Parcours</a><a href="#engagement" data-en="Community">Engagement</a><a href="#contact">Contact</a>
   </nav>
   <div class="ctl">
-    <div class="seg" id="th" role="group" aria-label="Thème"><button data-t="light" data-en="Day">Jour</button><button data-t="dark" data-en="Night">Nuit</button><button data-t="neon">Néon</button></div>
-    <div class="seg" id="lg" role="group" aria-label="Langue"><button data-l="0">FR</button><button data-l="1">EN</button></div>
+    <button class="round" id="th" type="button" aria-label="Changer de thème"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 3a9 9 0 0 1 0 18z" fill="currentColor"/></svg></button>
+    <button class="round" id="lg" type="button" aria-label="Changer de langue">FR</button>
+    <button class="round" id="bm" type="button" aria-label="Menu" aria-expanded="false">☰</button>
   </div>
 </header>
 
-
+<div class="wrap">
 <main id="top">
 
 <!-- ==================================================
@@ -71,7 +70,7 @@
 
 <!-- ==================================================
      BLOC : PROJETS
-     Style : css/projets.css · Les projets se modifient dans js/data.js (cartes générées par js/projets.js)
+     Style : css/projets.css · Les projets se modifient dans js/data.js
      ================================================== -->
   <section id="projets" aria-labelledby="t2"><h2 id="t2" data-en="Projects">Projets</h2><div class="projects" id="pj"></div></section>
 
@@ -91,15 +90,28 @@
   </section>
 
 <!-- ==================================================
-     BLOC : PARCOURS
-     Style : css/parcours.css
+     BLOC : PARCOURS (du plus récent au plus ancien)
+     Style : css/parcours.css · Pour ajouter une expérience, copie un <article class="tli"> et mets-le à sa place (par date)
      ================================================== -->
   <section id="parcours" aria-labelledby="t4">
-    <h2 id="t4" data-en="Experience">Parcours</h2>
-    <div class="timeline">
-      <div class="step"><h3 data-en="Technical CRM consultant (work-study) · Capgemini, Nantes">Consultante technique CRM (alternance) · Capgemini, Nantes</h3><small data-en="Sept. 2025 – Sept. 2026">Sept. 2025 – sept. 2026</small><p data-en="ServiceNow configuration, integration and application maintenance for large accounts in healthcare, banking and transport.">Paramétrage, intégration ServiceNow et MCO applicatif pour de grands comptes des secteurs santé, bancaire et transport.</p></div>
-      <div class="step"><h3 data-en="Full-stack developer (internship) · ImsCloud, Le Mans">Développeuse full-stack (stage) · ImsCloud, Le Mans</h3><small data-en="July – Oct. 2024">Juil. – oct. 2024</small><p data-en="Interactive widgets for an order management web app.">Widgets interactifs pour une application web de gestion de commandes.</p></div>
-      <div class="step"><h3 data-en="General engineering degree · ESEO, Angers">Diplôme d’ingénieur généraliste · ESEO, Angers</h3><small data-en="Sept. 2021 – Sept. 2026">Sept. 2021 – sept. 2026</small><p data-en="Engineering school with projects in software engineering, data science and DevOps.">École d’ingénieurs, avec des projets en génie logiciel, data science et DevOps.</p></div>
+    <h2 id="t4" data-en="Experience & education">Parcours</h2>
+    <p class="sub" data-en="Most recent first.">Du plus récent au plus ancien.</p>
+    <div class="tl">
+      <article class="tli">
+        <p class="meta"><time datetime="2025-09" data-en="Sept. 2025 – Sept. 2026">Sept. 2025 – sept. 2026</time><span class="tag" data-en="Work-study">Alternance</span></p>
+        <h3 data-en="Technical CRM consultant">Consultante technique CRM</h3><p class="org">Capgemini · Nantes</p>
+        <p data-en="ServiceNow configuration, integration and application maintenance for large accounts: Santé Publique France, Crédit Agricole, RATP.">Paramétrage, intégration ServiceNow et MCO applicatif pour de grands comptes : Santé Publique France, Crédit Agricole, RATP.</p>
+      </article>
+      <article class="tli">
+        <p class="meta"><time datetime="2024-07" data-en="July – Oct. 2024">Juil. – oct. 2024</time><span class="tag" data-en="Internship">Stage</span></p>
+        <h3 data-en="Full-stack developer">Développeuse full-stack</h3><p class="org">ImsCloud · Le Mans</p>
+        <p data-en="Interactive widgets for an order management web app (React, Node.js, Express), in an Agile Kanban setup.">Widgets interactifs pour une application web de gestion de commandes (React, Node.js, Express), en Agile Kanban.</p>
+      </article>
+      <article class="tli">
+        <p class="meta"><time datetime="2021-09" data-en="Sept. 2021 – Sept. 2026">Sept. 2021 – sept. 2026</time><span class="tag" data-en="Education">Formation</span></p>
+        <h3 data-en="General engineering degree">Diplôme d’ingénieur généraliste</h3><p class="org">ESEO · Angers</p>
+        <p data-en="Engineering school with projects in software engineering, data science and DevOps.">École d’ingénieurs, avec des projets en génie logiciel, data science et DevOps.</p>
+      </article>
     </div>
   </section>
 
@@ -117,15 +129,29 @@
   </section>
 
 <!-- ==================================================
-     BLOC : CONTACT
-     Style : css/contact.css
+     BLOC : CONTACT (formulaire + autres canaux)
+     Style : css/contact.css · Logique : js/contact.js
      ================================================== -->
-  <section id="contact" aria-labelledby="t6" style="padding-bottom:0">
-    <div class="contact">
-      <h2 id="t6" data-en="Let’s talk?">On discute ?</h2>
-      <p data-en="A job, an internship or a project to share: write to me.">Un poste, un stage ou un projet à partager : écris-moi.</p>
-      <a class="mail" href="mailto:fantakonelah@gmail.com">fantakonelah@gmail.com</a>
-      <div class="social"><a href="https://www.linkedin.com/in/fanta-kone" target="_blank" rel="noopener">LinkedIn</a><a href="tel:+33744760548">07 44 76 05 48</a></div>
+  <section id="contact" aria-labelledby="t6">
+    <h2 id="t6" data-en="Let’s discuss your needs">Discutons de votre besoin</h2>
+    <p class="sub" data-en="Open to job and internship opportunities in application integration, ServiceNow and software development.">Ouverte aux opportunités d’emploi et de stage en intégration applicative, ServiceNow et développement.</p>
+    <div class="cbox">
+      <form class="cform" id="cf">
+        <label><span data-en="Last name">Nom</span><input name="nom" placeholder="Dupont" required></label>
+        <label><span data-en="First name">Prénom</span><input name="prenom" placeholder="Marie" required></label>
+        <label><span>Email</span><input name="email" type="email" placeholder="vous@email.com" required></label>
+        <label><span data-en="Phone">Téléphone</span><input name="tel" type="tel" placeholder="00 00 00 00 00"></label>
+        <label class="full"><span data-en="Subject">Sujet</span><input name="sujet" placeholder="Proposition de poste ou de stage…" data-enp="Job or internship offer…"></label>
+        <label class="full"><span>Message</span><textarea name="message" placeholder="Votre message…" data-enp="Your message…" required></textarea></label>
+        <button class="send" type="submit" data-en="Send message">Envoyer le message</button>
+        <p class="note" id="cs" data-en="This form opens your email app with the message ready to send. Nothing is stored on this site.">Ce formulaire ouvre votre messagerie avec le message prêt à envoyer. Rien n’est stocké sur ce site.</p>
+      </form>
+      <div class="chan">
+        <h3 data-en="Other channels">Autres canaux</h3>
+        <a href="mailto:fantakonelah@gmail.com"><span class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg></span><span><b>Email</b><span class="v">fantakonelah@gmail.com</span></span></a>
+        <a href="tel:+33744760548"><span class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg></span><span><b data-en="Phone">Téléphone</b><span class="v">07 44 76 05 48</span></span></a>
+        <a href="https://www.linkedin.com/in/fanta-kone" target="_blank" rel="noopener"><span class="ico">in</span><span><b>LinkedIn</b><span class="v">in/fanta-kone</span></span></a>
+      </div>
     </div>
   </section>
 
@@ -135,24 +161,30 @@
      BLOC : PIED DE PAGE
      Style : css/header-footer.css
      ================================================== -->
-
-  <footer>© Fanta Kone, 2026</footer>
-
+  <footer class="foot">
+    <div><a class="brand" href="#top"><span class="mono">FK</span><span class="bn"><b>Fanta Kone</b><small data-en="Software systems engineer">Ingénieure SI</small></span></a><p>© 2026</p></div>
+    <div><h3>Navigation</h3><a href="#profil" data-en="Profile">Profil</a><a href="#projets" data-en="Projects">Projets</a><a href="#parcours" data-en="Experience">Parcours</a><a href="#contact">Contact</a></div>
+    <div><h3 data-en="Elsewhere">Ailleurs</h3><a href="mailto:fantakonelah@gmail.com">Email</a><a href="https://www.linkedin.com/in/fanta-kone" target="_blank" rel="noopener">LinkedIn</a></div>
+  </footer>
 </div>
+
+<button class="round up" id="up" type="button" aria-label="Haut de page">↑</button>
 
 <!-- ==================================================
      BLOC : FENÊTRE DE DÉTAIL DES PROJETS
      Style : css/detail.css · Remplie par js/projets.js
      ================================================== -->
-
 <dialog id="dlg" aria-labelledby="dt"><div id="dc"></div></dialog>
-<!-- Les scripts se chargent dans cet ordre : ne change pas l’ordre -->
+
+<!-- Les scripts se chargent dans cet ordre : ne change pas l’ordre (main.js en dernier) -->
 <script src="js/utils.js"></script>
 <script src="js/data.js"></script>
 <script src="js/projets.js"></script>
 <script src="js/lang.js"></script>
 <script src="js/theme.js"></script>
 <script src="js/background.js"></script>
+<script src="js/nav.js"></script>
+<script src="js/contact.js"></script>
 <script src="js/main.js"></script>
 </body>
 </html>

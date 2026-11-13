@@ -1,11 +1,26 @@
-/* ==== EN-TÊTE (menu, boutons thème et langue) + PIED DE PAGE ==== */
-header{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;padding:20px 0}
-.logo{font:800 1.4rem var(--display);text-decoration:none}
-nav{display:flex;gap:18px;flex-wrap:wrap}
-nav a{text-decoration:none;font-weight:500;padding:6px 2px}
-nav a:hover{text-decoration:underline;text-decoration-thickness:3px;text-decoration-color:var(--coral);text-underline-offset:6px}
-.ctl{display:flex;gap:10px;flex-wrap:wrap}
-.seg{display:flex;border:2px solid var(--ink);border-radius:999px;overflow:hidden;background:var(--card)}
-.seg button{border:0;background:none;padding:6px 14px;font-weight:500}
-.seg button[aria-pressed="true"]{background:var(--violet);color:var(--ov)}
-footer{padding:0 0 40px;color:var(--muted);font-size:.95rem}
+/* ==== MENU FLOTTANT (reste visible), boutons ronds, PIED DE PAGE, bouton haut de page ==== */
+html{scroll-padding-top:96px}
+.wrap{padding-top:92px}
+.nav{position:fixed;z-index:20;top:calc(12px + env(safe-area-inset-top,0px));left:50%;transform:translateX(-50%);width:min(1120px,calc(100% - 24px));display:flex;align-items:center;justify-content:space-between;gap:14px;padding:8px 12px 8px 16px;border-radius:999px;background:color-mix(in srgb,var(--card) 86%,transparent);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);box-shadow:0 10px 30px -12px rgba(20,10,60,.35);border:1px solid color-mix(in srgb,var(--ink) 10%,transparent)}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none}
+.mono{width:38px;height:38px;border-radius:12px;background:var(--violet);color:var(--ov);display:grid;place-items:center;font:800 1rem var(--display);flex:none}
+.bn b{display:block;font:800 1rem/1.1 var(--display)}
+.bn small{color:var(--muted);font-size:.78rem}
+#menu{display:flex;gap:2px}
+#menu a{position:relative;padding:8px 14px;border-radius:999px;text-decoration:none;font-weight:500;transition:background .2s}
+#menu a:hover{background:color-mix(in srgb,var(--ink) 8%,transparent)}
+#menu a.on{background:color-mix(in srgb,var(--violet) 20%,transparent);box-shadow:inset 0 0 0 1.5px var(--violet)}
+#menu a.on::after{content:"";position:absolute;left:50%;bottom:3px;width:5px;height:5px;margin-left:-2.5px;border-radius:50%;background:var(--violet)}
+.ctl{display:flex;gap:10px}
+.round{width:44px;height:44px;border-radius:50%;border:2px solid var(--ink);background:var(--card);font-size:1rem;font-weight:500;line-height:1;display:grid;place-items:center;padding:0;transition:transform .15s}
+.round:hover{transform:scale(1.08)}
+#th{font-size:1.3rem}
+#lg{border-color:var(--mint)}
+#bm{display:none}
+.up{position:fixed;right:20px;bottom:calc(20px + env(safe-area-inset-bottom,0px));z-index:20;opacity:0;pointer-events:none;transition:opacity .2s;font-size:1.2rem}
+.up.show{opacity:1;pointer-events:auto}
+.foot{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:32px;padding:56px 0 48px;margin-top:64px;border-top:1px solid color-mix(in srgb,var(--ink) 14%,transparent);color:var(--muted)}
+.foot h3{font-size:1.05rem;color:var(--ink);margin-bottom:10px}
+.foot a:not(.brand){display:block;padding:3px 0;text-decoration:none}
+.foot a:not(.brand):hover{color:var(--ink);text-decoration:underline}
+.foot .brand{color:var(--ink)}

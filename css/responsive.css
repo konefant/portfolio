@@ -1,3 +1,15 @@
 /* ==== MOBILE et mouvement réduit ==== */
-@media (max-width:820px){.projects{grid-template-columns:1fr}.proj.big{grid-column:auto}.hero{grid-template-columns:1fr;gap:32px}.ph{max-width:260px;justify-self:start}}
-@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.btn,dialog[open]{transition:none;animation:none}}
+@media (max-width:1000px){
+  #menu{display:none;position:absolute;top:calc(100% + 10px);left:0;right:0;flex-direction:column;padding:12px;border-radius:24px;background:var(--card);box-shadow:0 16px 40px -14px rgba(20,10,60,.4)}
+  .nav.open #menu{display:flex}
+  #bm{display:grid}
+  .bn small{display:none}
+}
+@media (max-width:820px){
+  .projects{grid-template-columns:1fr}.proj.big{grid-column:auto}
+  .hero{grid-template-columns:1fr;gap:32px}.ph{max-width:260px;justify-self:start}
+  .cbox{grid-template-columns:1fr}.chan{border-left:0;padding-left:0;margin-top:28px}.cform{padding-right:0}
+  .foot{grid-template-columns:1fr 1fr}
+}
+@media (max-width:520px){.cform{grid-template-columns:1fr}.foot{grid-template-columns:1fr}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition:none!important;animation:none!important}}
