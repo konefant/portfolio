@@ -12,3 +12,8 @@ dialog[open]{animation:in .25s ease-out}
 .db ul{padding-left:20px;margin:0 0 16px}
 .db li{margin-bottom:6px}
 .x{position:absolute;top:14px;right:14px;width:42px;height:42px;border-radius:50%;border:2px solid currentColor;background:none;font-size:1.3rem;line-height:1}
+.dsec{font-size:1.1rem;margin:20px 0 8px}
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(135px,1fr));gap:10px;margin:6px 0 14px}
+.kpi{background:color-mix(in srgb,var(--violet) 12%,var(--bg));border-radius:16px;padding:12px 14px}
+.kpi b{display:block;font:800 1.7rem var(--display);color:var(--violet);line-height:1.05;margin-bottom:2px}
+.kpi span{font-size:.86rem;color:var(--muted)}

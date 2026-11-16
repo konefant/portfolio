@@ -5,3 +5,4 @@
 .xi:nth-child(odd){justify-self:start}.xi:nth-child(even){justify-self:end}
 .xi::after{content:"";position:absolute;top:34px;width:22px;height:22px;border-radius:50%;background:var(--violet);border:4px solid var(--bg);box-shadow:0 0 0 6px color-mix(in srgb,var(--violet) 25%,transparent)}
 .xi:nth-child(odd)::after{right:-55px}.xi:nth-child(even)::after{left:-55px}
+.xi .more{color:var(--violet);margin-top:16px;font-size:.95rem;cursor:pointer}

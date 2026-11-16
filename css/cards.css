@@ -1,7 +1,7 @@
 /* ==== ÉLÉMENTS COMMUNS aux cartes : logo, date, ligne d’info, liste de détails ==== */
 .mono,.pill,.lab{font-family:"DM Mono",ui-monospace,SFMono-Regular,Menlo,monospace}
 .top{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-start;gap:12px;margin-bottom:14px}
-.logo{background:#fff;border-radius:16px;width:92px;height:62px;display:grid;place-items:center;padding:8px;box-shadow:0 2px 10px rgba(20,10,60,.12);flex:none}
+.logo{background:#fff;border-radius:16px;width:128px;height:76px;display:grid;place-items:center;padding:8px;box-shadow:0 2px 10px rgba(20,10,60,.12);flex:none}
 .logo img{max-width:100%;max-height:100%;object-fit:contain}
 .pill{font-size:.82rem;padding:6px 14px;border-radius:999px;background:color-mix(in srgb,var(--violet) 16%,transparent);color:var(--violet);white-space:nowrap}
 .org{color:var(--muted);font-weight:500;font-size:1.05rem;margin:0 0 4px}

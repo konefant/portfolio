@@ -7,7 +7,8 @@ Site statique en **HTML + CSS + JavaScript pur**. Tout est dans `index.html`, ra
 | Je veux changer…                         | J’ouvre…                                                              |
 |------------------------------------------|-----------------------------------------------------------------------|
 | Une compétence ou une carte              | `index.html`, bloc COMPÉTENCES (un `<article class="sk">` par carte)  |
-| Une expérience                           | `index.html`, bloc EXPÉRIENCES (un `<article class="xi">`, du plus récent au plus ancien) |
+| Une expérience (carte)                   | `index.html`, bloc EXPÉRIENCES (un `<article class="xi">`, du plus récent au plus ancien) |
+| Le détail d’une expérience (fenêtre)     | `js/experiences-data.js`                                               |
 | Une formation                            | `index.html`, bloc FORMATION (le numéro est dans `data-n="01"`)       |
 | Une certification                        | `index.html`, bloc CERTIFICATIONS                                     |
 | Un projet                                | `js/data.js`                                                          |
@@ -20,8 +21,13 @@ Site statique en **HTML + CSS + JavaScript pur**. Tout est dans `index.html`, ra
 
 ## Logos
 
-- `hitachi.svg` vient d’une bibliothèque d’icônes libre. Les autres (`capgemini`, `eseo`, `itma`, `cci`, `inrs`, `mooc`, `imscloud`, `robotsmali`, `eseobantu`, `lycee`, `cuisine`) sont des **logos provisoires** (texte ou pictogramme).
-- Pour mettre un vrai logo : enregistre-le dans `assets/logos/` sous le même nom. Si c’est un PNG, par exemple `capgemini.png`, remplace `capgemini.svg` par `capgemini.png` dans `index.html` (Ctrl+H).
+- Les vrais logos de **Capgemini, Hitachi, ImsCloud, RobotsMali, ESEO et ITMA** sont dans `assets/logos/` (fichiers `.png`).
+- Les autres (`eseobantu`, `lycee`, `cci`, `inrs`, `mooc`, `cuisine`) sont des **logos provisoires** (`.svg`, sigle ou pictogramme).
+- Pour mettre un vrai logo : enregistre-le dans `assets/logos/` (par exemple `cci.png`), puis dans `index.html` fais Ctrl+H et remplace `cci.svg` par `cci.png`. Les logos sont recadrés automatiquement dans leur cadre blanc.
+
+## Détail des expériences
+
+Le bouton « Voir le détail complet » de chaque expérience ouvre une fenêtre avec le contexte, ce que tu as fait, les résultats chiffrés et les technologies. Tout se modifie dans `js/experiences-data.js` : le numéro d’une expérience suit l’ordre des cartes (0 = la première). Chaque texte existe en deux versions `[français, anglais]`. Pour un chiffre, ajoute une ligne dans `res` : `{"n":"550","l":["Skip Records traités","Skip Records processed"]}`.
 
 ## Règles à retenir
 
