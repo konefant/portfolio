@@ -1,9 +1,10 @@
-/* ==== BASE : couleurs des 3 thèmes (Jour / Nuit / Néon), polices, boutons, titres ==== */
-:root{--bg:#F6F4FF;--ink:#1B1740;--muted:#55507A;--card:#FFFFFF;--violet:#5B3DF5;--coral:#FF5C8A;--sun:#FFC93C;--mint:#2EE6A6;--ov:#FFFFFF;--oc:#1B1740;--os:#1B1740;--om:#10332A;
+/* ==== BASE : palette professionnelle des 3 thèmes (Jour / Nuit / Néon), polices, boutons, titres ==== */
+:root{--bg:#F4F7FB;--ink:#0F2137;--muted:#52627A;--card:#FFFFFF;--violet:#2563EB;--coral:#0E9AA7;--sun:#C99A2E;--mint:#12A582;--ov:#FFFFFF;--oc:#FFFFFF;--os:#0F2137;--om:#FFFFFF;--line:rgba(15,33,55,.11);--r:18px;
+--hero-bg:linear-gradient(115deg,#E3F3EF 0%,#E1EDFB 52%,#DAE5FF 100%);
 --display:"Bricolage Grotesque","Trebuchet MS",system-ui,sans-serif;--body:"DM Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
 box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
-:root[data-theme="dark"]{--bg:#14112E;--ink:#F2EFFF;--muted:#B4AEDB;--card:#1F1A45;--violet:#7C63FF;--coral:#FF7AA2;--sun:#FFD25E;--mint:#3DEBB0}
-:root[data-theme="neon"]{--bg:#07030F;--ink:#EFFFFB;--muted:#9FB8D8;--card:#120A24;--violet:#B34DFF;--coral:#FF3D9A;--sun:#F4FF3A;--mint:#19FFC6;--ov:#07030F;--oc:#07030F;--os:#07030F;--om:#07030F}
+:root[data-theme="dark"]{--bg:#0B1626;--ink:#E8EEF7;--muted:#9FB0C7;--card:#12233A;--violet:#5B9BFF;--coral:#35C4D1;--sun:#E3B95B;--mint:#3DD6B0;--ov:#06101D;--oc:#06101D;--os:#06101D;--om:#06101D;--line:rgba(232,238,247,.13);--hero-bg:linear-gradient(115deg,#0F2A3F 0%,#12304D 55%,#173A5E 100%)}
+:root[data-theme="neon"]{--bg:#050A14;--ink:#E9F6FF;--muted:#8FB3CC;--card:#0A1424;--violet:#3DA5FF;--coral:#00E5D0;--sun:#FFD166;--mint:#58FFA6;--ov:#04101C;--oc:#04101C;--os:#04101C;--om:#04101C;--line:rgba(61,165,255,.30);--hero-bg:linear-gradient(115deg,#06182A 0%,#07203A 55%,#0A2A4D 100%)}
 html{height:100%;scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
 *,*::before,*::after{box-sizing:border-box}
 body{margin:0;background:var(--bg);color:var(--ink);font:400 1.0625rem/1.6 var(--body);-webkit-font-smoothing:antialiased;transition:background .3s}

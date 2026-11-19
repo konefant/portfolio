@@ -21,9 +21,14 @@ Site statique en **HTML + CSS + JavaScript pur**. Tout est dans `index.html`, ra
 
 ## Logos
 
-- Les vrais logos de **Capgemini, Hitachi, ImsCloud, RobotsMali, ESEO et ITMA** sont dans `assets/logos/` (fichiers `.png`).
-- Les autres (`eseobantu`, `lycee`, `cci`, `inrs`, `mooc`, `cuisine`) sont des **logos provisoires** (`.svg`, sigle ou pictogramme).
-- Pour mettre un vrai logo : enregistre-le dans `assets/logos/` (par exemple `cci.png`), puis dans `index.html` fais Ctrl+H et remplace `cci.svg` par `cci.png`. Les logos sont recadrés automatiquement dans leur cadre blanc.
+- **Vrais logos** dans `assets/logos/` (fichiers `.png`) : Capgemini, Hitachi, ImsCloud, RobotsMali, ESEO, ITMA, CLOE, INRS, MOOC GdP, Lycée Sacré-Cœur (emblème seul, version « 20 ans ») et MyDigitalSchool (extrait de la plaquette du programme).
+- **Logos dessinés** (`.svg`) pour ESEOBANTU et la cuisine, faute de logo officiel. Pour mettre un vrai logo d’ESEOBANTU : enregistre-le dans `assets/logos/` (par exemple `eseobantu.png`), puis dans `index.html` fais Ctrl+H et remplace `eseobantu.svg` par `eseobantu.png`.
+
+## Apparence
+
+- **Palette** (Jour, Nuit, Néon) : variables en haut de `css/base.css`.
+- **Bannière d’accueil** : `css/hero.css` et le bloc ACCUEIL de `index.html`.
+- **Bordures, ombres, arrondis** : `css/pro.css`.
 
 ## Détail des expériences
 

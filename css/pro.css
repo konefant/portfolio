@@ -1,0 +1,23 @@
+/* ==== FINITIONS PRO : bordures fines, ombres douces, rayons homogènes ==== */
+:root{--sh:0 1px 2px rgba(15,33,55,.05),0 10px 30px -18px rgba(15,33,55,.22)}
+:root[data-theme="dark"],:root[data-theme="neon"]{--sh:0 1px 2px rgba(0,0,0,.3),0 12px 32px -18px rgba(0,0,0,.65)}
+.prof,.xi,.fi,.ci,.eng,.cbox,.mos,.kpi{border:1px solid var(--line);border-radius:var(--r);box-shadow:var(--sh)}
+.sk{border-width:1px;border-color:var(--line);border-radius:var(--r);box-shadow:var(--sh)}
+.chan a{border:1px solid var(--line);border-radius:14px}
+.mos{padding:6px}.mi{border-radius:12px}
+.logo{border:1px solid var(--line);border-radius:12px;box-shadow:none}
+.nav,.round{border:1px solid var(--line)}
+#lg{border-color:var(--mint)}
+.btn{border-radius:12px;border:1px solid var(--line);background:var(--card);padding:13px 24px}
+.btn.main{background:var(--violet);border-color:var(--violet);color:var(--ov)}
+.send,.more{border-radius:12px}
+.cform input,.cform textarea{border:1px solid var(--line);border-radius:10px;background:var(--bg)}
+dialog{border:1px solid var(--line);border-radius:20px}
+h2{letter-spacing:-.025em}
+.tli,.tag{border-radius:10px}
+.chips li{border-width:1px}
+.foot{border-top-color:var(--line)}
+@media (hover:hover){
+ .proj:hover,.xi:hover,.fi:hover,.ci:hover,.eng:hover,.chan a:hover{transform:translateY(-4px);box-shadow:0 0 0 1px var(--violet),0 18px 36px -18px color-mix(in srgb,var(--violet) 55%,transparent)}
+ :root[data-theme="neon"] .proj:hover,:root[data-theme="neon"] .xi:hover,:root[data-theme="neon"] .fi:hover,:root[data-theme="neon"] .ci:hover,:root[data-theme="neon"] .eng:hover{box-shadow:0 0 0 1px var(--violet),0 0 30px -8px var(--violet)}
+}

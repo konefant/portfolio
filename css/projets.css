@@ -1,12 +1,10 @@
-/* ==== PROJETS : cartes de couleur ==== */
+/* ==== PROJETS : cartes sobres avec liseré de couleur ==== */
 .projects{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
-.proj{border-radius:28px;padding:30px;display:flex;flex-direction:column;justify-content:space-between;min-height:300px}
+.proj{position:relative;overflow:hidden;background:var(--card);color:var(--ink);border:1px solid var(--line);border-radius:var(--r);box-shadow:0 1px 2px rgba(15,33,55,.05),0 10px 30px -18px rgba(15,33,55,.22);padding:30px 30px 28px;display:flex;flex-direction:column;justify-content:space-between;min-height:280px}
+.proj::before{content:"";position:absolute;left:0;right:0;top:0;height:5px;background:var(--violet)}
+.proj.c::before{background:var(--coral)}.proj.s::before{background:var(--sun)}.proj.m::before{background:var(--mint)}
 .proj.big{grid-column:1/-1}
-.proj.v{background:var(--violet);color:var(--ov)}
-.proj.c{background:var(--coral);color:var(--oc)}
-.proj.s{background:var(--sun);color:var(--os)}
-.proj.m{background:var(--mint);color:var(--om)}
-.ctx{font-weight:500;opacity:.85;margin-bottom:10px}
-.more{align-self:flex-start;margin-top:18px;padding:10px 22px;border-radius:999px;border:2px solid currentColor;background:none;font-weight:500}
-.more:hover{background:rgba(255,255,255,.25)}
-:root[data-theme="neon"] .proj,:root[data-theme="neon"] .contact{box-shadow:0 0 26px -6px currentColor}
+.proj .chips li{color:var(--muted);border-color:var(--line);border-width:1px}
+.ctx{font-weight:500;color:var(--muted);margin-bottom:10px;font-size:.95rem}
+.more{align-self:flex-start;margin-top:18px;padding:10px 20px;border-radius:12px;border:1px solid var(--violet);color:var(--violet);background:none;font-weight:500}
+.more:hover{background:color-mix(in srgb,var(--violet) 10%,transparent)}
